@@ -7,12 +7,13 @@ import dude from "./assets/dude.png";
 
 const config = {
     type: Phaser.AUTO,
+    parent: "phaser-example",
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
+      width: 800,
+      height: 600
     },
-    width: 800,
-    height: 600,
     physics: {
         default: 'arcade',
         arcade: {
