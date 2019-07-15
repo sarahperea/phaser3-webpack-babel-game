@@ -1,5 +1,4 @@
 import Phaser from "phaser";
-import logoImg from "./assets/logo.png";
 import sky from "./assets/bg.jpg";
 import ground1 from "./assets/ground1.png";
 import star from "./assets/star.png";
@@ -28,16 +27,16 @@ const config = {
     }
 };
 
-var player;
-var stars;
-var bombs;
-var platforms;
-var cursors;
-var score = 0;
-var gameOver = false;
-var scoreText;
+let player,
+  stars,
+  bombs,
+  platforms,
+  cursors,
+  score = 0,
+  gameOver = false,
+  scoreText;
 
-var game = new Phaser.Game(config);
+const game = new Phaser.Game(config);
 
 function preload ()
 {
@@ -175,9 +174,9 @@ function collectStar (player, star)
 
         });
 
-        var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+        let x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
-        var bomb = bombs.create(x, 16, 'bomb');
+        let bomb = bombs.create(x, 16, 'bomb');
         bomb.setBounce(1);
         bomb.setCollideWorldBounds(true);
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
