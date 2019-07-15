@@ -25,7 +25,8 @@ const config = {
         preload: preload,
         create: create,
         update: update
-    }
+    },
+    antialias: false, //prevent sprites from looking blurry,
 };
 
 let player,
