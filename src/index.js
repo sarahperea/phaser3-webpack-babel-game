@@ -21,6 +21,7 @@ let GameScene = new Phaser.Class({
     this.score = 0;
     this.gameOver = false;
     this.scoreText = "";
+    this.sound = null;
   },
 
   preload: function ()
@@ -31,10 +32,21 @@ let GameScene = new Phaser.Class({
     this.load.image('bomb', bomb);
     this.load.spritesheet('dude', dude, { frameWidth: 32, frameHeight: 48 });
     this.load.spritesheet('fullscreen', dude, { frameWidth: 32, frameHeight: 48 });
+    this.load.audio('theme', [
+        './src/assets/audio/jackinthebox.mp3'
+    ],{
+        instances: 2
+    });
   },
 
   create: function ()
   {
+    let music = this.sound.add('theme', {loop: true});
+
+    music.play({
+        seek: 2.550
+    });
+
     this.add.image(400, 300, 'sky');
 
     const platforms = this.physics.add.staticGroup();
@@ -208,12 +220,16 @@ const config = {
     width: 800,
     height: 600
   },
+  pixelArt: true,
   physics: {
     default: 'arcade',
     arcade: {
         gravity: { y: 300 },
         debug: false
     }
+  },
+  audio: {
+    disableWebAudio: true
   },
   scene: GameScene,
   antialias: false, //prevent sprites from looking blurry,
