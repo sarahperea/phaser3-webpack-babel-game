@@ -1,4 +1,4 @@
-import GameScene from '../scenes/gameScene/index.js'
+import Phaser from "phaser";
 
 export default {
   type: Phaser.AUTO,
@@ -20,6 +20,5 @@ export default {
   audio: {
     disableWebAudio: true
   },
-  scene: GameScene,
   antialias: false, //prevent sprites from looking blurry,
 }
