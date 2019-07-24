@@ -1,9 +1,9 @@
 import Phaser from "phaser";
-import sky from "./assets/bg.jpg";
-import ground1 from "./assets/ground1.png";
-import star from "./assets/star.png";
-import bomb from "./assets/bomb.png";
-import dude from "./assets/dude.png";
+import sky from "../assets/bg.jpg";
+import ground1 from "../assets/ground1.png";
+import star from "../assets/star.png";
+import bomb from "../assets/bomb.png";
+import dude from "../assets/dude.png";
 
 let GameScene = new Phaser.Class({
 
@@ -33,7 +33,7 @@ let GameScene = new Phaser.Class({
     this.load.spritesheet('dude', dude, { frameWidth: 32, frameHeight: 48 });
     this.load.spritesheet('fullscreen', dude, { frameWidth: 32, frameHeight: 48 });
     this.load.audio('theme', [
-        './src/assets/audio/jackinthebox.mp3'
+        '../assets/audio/jackinthebox.mp3'
     ],{
         instances: 2
     });
