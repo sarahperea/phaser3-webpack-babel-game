@@ -5,13 +5,11 @@ import star from "../../../assets/star.png";
 import bomb from "../../../assets/bomb.png";
 import dude from "../../../assets/dude.png";
 
-export default new Phaser.Class({
+export default class GameScene extends Phaser.Scene {
 
-  Extends: Phaser.Scene,
-  initialize: 
-
-  function GameScene ()
+  constructor ()
   {
+    super('Game');
     Phaser.Scene.call(this, { key: 'gameScene', active: true });
 
     this.player = null;
@@ -22,24 +20,24 @@ export default new Phaser.Class({
     this.gameOver = false;
     this.scoreText = "";
     this.sound = null;
-  },
+  }
 
-  preload: function ()
+  preload ()
   {
+    this.load.audio('theme', [
+        '../../../assets/audio/jackinthebox.mp3'
+    ],{
+        instances: 2
+    });
     this.load.image('sky', sky);
     this.load.image('ground', ground1);
     this.load.image('star', star);
     this.load.image('bomb', bomb);
     this.load.spritesheet('dude', dude, { frameWidth: 32, frameHeight: 48 });
     this.load.spritesheet('fullscreen', dude, { frameWidth: 32, frameHeight: 48 });
-    this.load.audio('theme', [
-        '../assets/audio/jackinthebox.mp3'
-    ],{
-        instances: 2
-    });
-  },
+  }
 
-  create: function ()
+  create ()
   {
     let music = this.sound.add('theme', {loop: true});
 
@@ -139,9 +137,9 @@ export default new Phaser.Class({
         this.scale.startFullscreen();
       }
     }, this);
-  },
+  }
 
-  update: function ()
+  update ()
   {
     if (this.gameOver)
       return
@@ -172,9 +170,9 @@ export default new Phaser.Class({
     {
         player.setVelocityY(-330);
     }
-  },
+  }
 
-  collectStar: function (player, star)
+  collectStar (player, star)
   {
     star.disableBody(true, true);
 
@@ -196,9 +194,9 @@ export default new Phaser.Class({
       bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
       bomb.allowGravity = false;
     }
-  },
+  }
 
-  hitBomb: function (player, bomb)
+  hitBomb (player, bomb)
   {
     this.physics.pause();
 
@@ -209,5 +207,5 @@ export default new Phaser.Class({
     this.gameOver = true;
   }
 
-})
+}
 
