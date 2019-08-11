@@ -9,8 +9,8 @@ export default class GameScene extends Phaser.Scene {
 
   constructor ()
   {
-    super('Game');
-    Phaser.Scene.call(this, { key: 'gameScene', active: true });
+    super('GameScene');
+    // Phaser.Scene.call(this, { key: 'gameScene', active: true });
 
     this.player = null;
     this.stars = null;
