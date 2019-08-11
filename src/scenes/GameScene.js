@@ -119,7 +119,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }, this);
 
-    this.scoreText.setText('v15');
+    // this.scoreText.setText('Score: ' + this.score);
 
     const FKey = this.input.keyboard.addKey('F');
 
