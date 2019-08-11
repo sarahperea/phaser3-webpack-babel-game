@@ -1,5 +1,5 @@
 import config from './config/config.js'
-import GameScene from './scenes/gameScene/index.js'
+import GameScene from './scenes/GameScene.js'
 
 class Game extends Phaser.Game {
   constructor () {

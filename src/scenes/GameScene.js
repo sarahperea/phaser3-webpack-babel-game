@@ -1,9 +1,9 @@
 import Phaser from "phaser";
-import sky from "../../../assets/bg.jpg";
-import ground1 from "../../../assets/ground1.png";
-import star from "../../../assets/star.png";
-import bomb from "../../../assets/bomb.png";
-import dude from "../../../assets/dude.png";
+import sky from "../../assets/bg.jpg";
+import ground1 from "../../assets/ground1.png";
+import star from "../../assets/star.png";
+import bomb from "../../assets/bomb.png";
+import dude from "../../assets/dude.png";
 
 export default class GameScene extends Phaser.Scene {
 
@@ -25,7 +25,7 @@ export default class GameScene extends Phaser.Scene {
   preload ()
   {
     this.load.audio('theme', [
-        '../../../assets/audio/jackinthebox.mp3'
+        '../../assets/audio/jackinthebox.mp3'
     ],{
         instances: 2
     });
