@@ -3,6 +3,7 @@ import ground1 from "../../assets/ground1.png";
 import star from "../../assets/star.png";
 import bomb from "../../assets/bomb.png";
 import dude from "../../assets/dude.png";
+import StartScene from "./StartScene.js"
 
 export default class GameScene extends Phaser.Scene {
 
@@ -18,6 +19,7 @@ export default class GameScene extends Phaser.Scene {
     this.gameOver = false;
     this.scoreText = "";
     this.sound = null;
+    this.gameOverRect;
   }
 
   preload ()
@@ -203,6 +205,15 @@ export default class GameScene extends Phaser.Scene {
     player.anims.play('turn');
 
     this.gameOver = true;
+    const gameoverRect = this.add.rectangle(400, 300, 280, 140, 0x000000, 1);
+    this.add.text(320, 280, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
+    this.add.text(296, 310, 'Click the screen to start', { fontSize: '14px', fill: '#ffffff' })
+
+    this.input.on('pointerdown', () => {
+      this.score = 0;
+      this.gameOver = false;
+      this.scene.restart();
+    });
   }
 
 }
