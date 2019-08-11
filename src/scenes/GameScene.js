@@ -19,7 +19,6 @@ export default class GameScene extends Phaser.Scene {
     this.gameOver = false;
     this.scoreText = "";
     this.sound = null;
-    this.gameOverRect;
   }
 
   preload ()
@@ -121,8 +120,6 @@ export default class GameScene extends Phaser.Scene {
       }
     }, this);
 
-    this.scoreText.setText('v15');
-
     const FKey = this.input.keyboard.addKey('F');
 
     FKey.on('down', function () {
@@ -205,7 +202,8 @@ export default class GameScene extends Phaser.Scene {
     player.anims.play('turn');
 
     this.gameOver = true;
-    const gameoverRect = this.add.rectangle(400, 300, 280, 140, 0x000000, 1);
+    
+    this.add.rectangle(400, 300, 280, 140, 0x000000, 1);
     this.add.text(320, 280, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
     this.add.text(296, 310, 'Click the screen to start', { fontSize: '14px', fill: '#ffffff' })
 
