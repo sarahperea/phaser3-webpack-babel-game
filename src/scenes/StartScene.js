@@ -1,9 +1,6 @@
-import GameScene from './GameScene.js'
-
 export default class StartScene extends Phaser.Scene {
   constructor() {
     super('StartScene');
-    // Phaser.Scene.call(this, { key: 'StartScene', active: true });
   }
 
   create() {

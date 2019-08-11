@@ -1,4 +1,3 @@
-import Phaser from "phaser";
 import sky from "../../assets/bg.jpg";
 import ground1 from "../../assets/ground1.png";
 import star from "../../assets/star.png";
@@ -10,7 +9,6 @@ export default class GameScene extends Phaser.Scene {
   constructor ()
   {
     super('GameScene');
-    // Phaser.Scene.call(this, { key: 'gameScene', active: true });
 
     this.player = null;
     this.stars = null;
