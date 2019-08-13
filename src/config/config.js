@@ -9,6 +9,7 @@ export default {
     width: 800,
     height: 600
   },
+  backgroundColor: '#4B0082',
   pixelArt: true,
   physics: {
     default: 'arcade',
