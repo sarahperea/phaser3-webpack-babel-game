@@ -1,9 +1,9 @@
-# Phaser 3 - Webpack-Babel-ES6 Game
+# Phaser3-Webpack-Babel-ES6 Game
 
 
 ## Requirements
 
-- [Node.js](https://nodejs.org)- to install dependencies and run scripts via `npm`.
+- [Node.js](https://nodejs.org) - to install dependencies and run scripts via `npm`.
 
 ## Available Commands
 
