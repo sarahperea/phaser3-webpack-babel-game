@@ -233,7 +233,21 @@ export default class GameScene extends Phaser.Scene {
       frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
       frameRate: 10,
       repeat: -1
-    });    
+    });   
+
+    /*PLAYER ANIM SEPARATE PNG*/
+/*    this.anims.create({
+        key: 'snooze',
+        frames: [
+            { key: 'cat1', frame: null },
+            { key: 'cat2', frame: null },
+            { key: 'cat3', frame: null },
+            { key: 'cat4', frame: null, duration: 50 }
+        ],
+        frameRate: 8,
+        repeat: -1
+    });*/
+
   }
 
   collectStar (player, star)
