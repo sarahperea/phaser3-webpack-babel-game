@@ -1,4 +1,4 @@
-# Phaser 3 - Webpack-Babel-ES6 Game
+# Phaser3-Webpack-Babel-ES6 Game
 
 
 ## Requirements
