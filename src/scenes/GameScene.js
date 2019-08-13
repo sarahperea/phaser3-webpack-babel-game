@@ -1,5 +1,8 @@
-import sky from "../../assets/bg.jpg";
-import ground1 from "../../assets/ground1.png";
+import sky from "../../assets/BG.png";
+import ground1 from "../../assets/13.png";
+import ground2 from "../../assets/14.png";
+import ground3 from "../../assets/15.png";
+import ground4 from "../../assets/16.png";
 import star from "../../assets/star.png";
 import bomb from "../../assets/bomb.png";
 import dude from "../../assets/dude.png";
@@ -70,7 +73,10 @@ export default class GameScene extends Phaser.Scene {
         instances: 2
     });
     this.load.image('sky', sky);
-    this.load.image('ground', ground1);
+    this.load.image('ground1', ground1); //soil
+    this.load.image('ground2', ground2);
+    this.load.image('ground3', ground3);
+    this.load.image('ground4', ground4);
     this.load.image('star', star);
     this.load.image('bomb', bomb);
     this.load.spritesheet('dude', dude, { frameWidth: 32, frameHeight: 48 });
@@ -187,12 +193,18 @@ export default class GameScene extends Phaser.Scene {
   }*/
 
   setupPlatforms () {
-    this.platforms = this.physics.add.staticGroup();
+    this.platforms = this.physics.add.staticGroup({
+      key: 'ground1',
+      repeat: 11, //creates 12 stars
+      setXY: { x: 0, y: 560, stepX: 70 } //stepX is distance
+    });
 
-    this.platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-    this.platforms.create(600, 400, 'ground');
-    this.platforms.create(50, 250, 'ground');
-    this.platforms.create(750, 220, 'ground');
+    // this.platforms.create(400, 580, 'ground').setScale(2).refreshBody();
+    this.platforms.create(500, 400, 'ground2');
+    this.platforms.create(628, 400, 'ground3');
+    this.platforms.create(756, 400, 'ground4');
+/*    this.platforms.create(50, 250, 'ground3');
+    this.platforms.create(750, 220, 'ground');*/
   }
 
   setupPlayer () {
@@ -261,7 +273,7 @@ export default class GameScene extends Phaser.Scene {
     
     this.add.rectangle(400, 300, 280, 140, 0x000000, 1);
     this.add.text(320, 280, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
-    this.add.text(296, 310, 'Click the screen to start', { fontSize: '14px', fill: '#ffffff' })
+    this.add.text(286, 310, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
 
     this.input.on('pointerdown', () => {
       this.score = 0;
