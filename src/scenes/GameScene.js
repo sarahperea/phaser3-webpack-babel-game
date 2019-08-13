@@ -142,8 +142,8 @@ export default class GameScene extends Phaser.Scene {
 
     this.stars = this.physics.add.group({
       key: 'star',
-      repeat: 11,
-      setXY: { x: 12, y: 0, stepX: 70 }
+      repeat: 11, //creates 12 stars
+      setXY: { x: 12, y: 0, stepX: 70 } //stepX is distance
     });
 
     this.stars.children.iterate(function (child) {
@@ -164,35 +164,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.player = player;
 
-    const button = this.add.image(800-16, 16, 'fullscreen', 0).setOrigin(1, 0).setInteractive();
-
-    button.on('pointerup', function () {
-      if (this.scale.isFullscreen)
-      {
-        button.setFrame(0);
-        this.scale.stopFullscreen();
-      }
-      else
-      {
-        button.setFrame(1);
-        this.scale.startFullscreen();
-      }
-    }, this);
-
-    const FKey = this.input.keyboard.addKey('F');
-
-    FKey.on('down', function () {
-      if (this.scale.isFullscreen)
-      {
-        button.setFrame(0);
-        this.scale.stopFullscreen();
-      }
-      else
-      {
-        button.setFrame(1);
-        this.scale.startFullscreen();
-      }
-    }, this);
+    // this.createFullScreenBtn();
   }
 
   update ()
@@ -228,6 +200,38 @@ export default class GameScene extends Phaser.Scene {
     }
   }
 
+/*  createFullScreenBtn () {
+    const button = this.add.image(800-16, 16, 'fullscreen', 0).setOrigin(1, 0).setInteractive();
+
+    button.on('pointerup', function () {
+      if (this.scale.isFullscreen)
+      {
+        button.setFrame(0);
+        this.scale.stopFullscreen();
+      }
+      else
+      {
+        button.setFrame(1);
+        this.scale.startFullscreen();
+      }
+    }, this);
+
+    const FKey = this.input.keyboard.addKey('F');
+
+    FKey.on('down', function () {
+      if (this.scale.isFullscreen)
+      {
+        button.setFrame(0);
+        this.scale.stopFullscreen();
+      }
+      else
+      {
+        button.setFrame(1);
+        this.scale.startFullscreen();
+      }
+    }, this);
+  }*/
+
   collectStar (player, star)
   {
     star.disableBody(true, true);
@@ -235,21 +239,22 @@ export default class GameScene extends Phaser.Scene {
     this.score += 10;
     this.scoreText.setText('Score: ' + this.score);
 
+    // creates new batch of stars when no. of stars = 0
     if (this.stars.countActive(true) === 0)
     {
-      //  A new batch of stars to collect
       this.stars.children.iterate(function (child) {
           child.enableBody(true, child.x, 0, true, true);
       });
-
-      let x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
-
-      let bomb = this.bombs.create(x, 16, 'bomb');
-      bomb.setBounce(1);
-      bomb.setCollideWorldBounds(true);
-      bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-      bomb.allowGravity = false;
     }
+
+    // creates bomb whenever player collides with star
+    let x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+    let bomb = this.bombs.create(x, 16, 'bomb');
+    bomb.setBounce(1);
+    bomb.setCollideWorldBounds(true);
+    bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+    bomb.allowGravity = false;
   }
 
   hitBomb (player, bomb)
