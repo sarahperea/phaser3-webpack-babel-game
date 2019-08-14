@@ -15,5 +15,8 @@
 
 ## Assets
 
-- Cute girl player - https://www.gameart2d.com/cute-girl-free-sprites.html
+| Asset | Source |
+|---------|-------------|
+| Cute Girl | https://www.gameart2d.com/cute-girl-free-sprites.html |
+| Platforms | https://www.gameart2d.com/platformer-game-tileset-5.html |
 
