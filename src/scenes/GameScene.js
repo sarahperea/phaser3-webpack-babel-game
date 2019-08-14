@@ -14,6 +14,7 @@ export default class GameScene extends Phaser.Scene {
     this.gameOver = false;
     this.scoreText = "";
     this.sound = null;
+    this.bgMusic = null;
   }
 
   preload ()
@@ -107,13 +108,11 @@ export default class GameScene extends Phaser.Scene {
 
   create ()
   {
-    let music = this.sound.add('theme', {loop: true});
+    this.bgMusic = this.sound.add('theme', {loop: true});
 
-    music.play({
-        seek: 2.550
-    });
+    this.bgMusic.play();
 
-    let background = this.add.image(400, 300, 'bg');
+    let background = this.add.image(0, 0, 'bg').setOrigin(0,0);
     background.setTint('0x555555');
     this.setupPlatforms();
     this.setupPlayer();
@@ -133,7 +132,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.bombs = this.physics.add.group();
 
-    this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#fff' });
 
     this.setupCollidersAndOverlaps();
 
@@ -143,9 +142,9 @@ export default class GameScene extends Phaser.Scene {
   update ()
   {
     if (this.gameOver) {
-      if (this.player.y > 455) {
+      // if (this.player.y > 455) {
         this.physics.pause()
-      }
+      // }
       return;
     }
 
@@ -205,18 +204,18 @@ export default class GameScene extends Phaser.Scene {
     this.platforms = this.physics.add.staticGroup({
       key: 'ground1',
       repeat: 11, //creates 12 stars
-      setXY: { x: 0, y: 560, stepX: 70 } //stepX is distance
+      setXY: { x: 0, y: 600, stepX: 70 } //stepX is distance
     });
 
     // this.platforms.create(400, 580, 'ground').setScale(2).refreshBody();
-    this.platforms.create(500, 400, 'ground2');
-    this.platforms.create(628, 400, 'ground3');
-    this.platforms.create(756, 400, 'ground4');
+    this.platforms.create(500, 410, 'ground2');
+    this.platforms.create(628, 410, 'ground3');
+    this.platforms.create(756, 410, 'ground4');
   }
 
   setupPlayer () {
     this.player = this.physics.add.sprite(100, 450, 'girlRun1');
-    this.player.setScale(0.2);
+    this.player.setScale(0.17);
 
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
@@ -303,19 +302,17 @@ export default class GameScene extends Phaser.Scene {
 
   hitBomb (player, bomb)
   {
-    if (!this.gameOver) {
-      player.anims.play('die');
-    }
-
+    player.anims.play('die');
     this.gameOver = true;
     
-    this.add.rectangle(400, 300, 280, 140, 0x000000, 1);
-    this.add.text(320, 280, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
-    this.add.text(286, 310, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
+    this.add.rectangle(400, 300, 280, 60, 0x000000, 1);
+    this.add.text(320, 276, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
+    this.add.text(286, 306, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
 
     this.input.on('pointerdown', () => {
       this.score = 0;
       this.gameOver = false;
+      this.bgMusic.stop();
       this.scene.restart();
     });
   }
@@ -324,9 +321,7 @@ export default class GameScene extends Phaser.Scene {
     this.physics.add.collider(this.player, this.platforms);
     this.physics.add.collider(this.stars, this.platforms);
     this.physics.add.collider(this.bombs, this.platforms);
-
     this.physics.add.overlap(this.player, this.stars, this.collectStar, null, this);
-
     this.physics.add.collider(this.player, this.bombs, this.hitBomb, null, this);
   }
 
