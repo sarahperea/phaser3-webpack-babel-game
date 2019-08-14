@@ -81,6 +81,10 @@ export default class GameScene extends Phaser.Scene {
       this.load.image(`girlIdle${i}`, `girl/Idle (${i}).png`);
     }
 
+/*    for(let i=1; i<=30; i++) {
+      this.load.image(`girlIdle${i}`, `girl/Dead (${i}).png`);
+    }*/
+
     this.load.on('progress', function (value) {
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
@@ -153,7 +157,7 @@ export default class GameScene extends Phaser.Scene {
       this.player.flipX = false;
     } else  {
       this.player.setVelocityX(0);
-      this.player.anims.play('turn', true);
+      this.player.anims.play('idle', true);
     }
 
     if (cursors.up.isDown && this.player.body.touching.down) {
@@ -223,7 +227,7 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: 'turn',
+      key: 'idle',
       frames: this.getGirlIdleFrames(),
       frameRate: 20,
       repeat: -1
