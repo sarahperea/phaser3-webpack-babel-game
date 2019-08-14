@@ -1,12 +1,3 @@
-import sky from "../../assets/BG.png";
-import ground1 from "../../assets/13.png";
-import ground2 from "../../assets/14.png";
-import ground3 from "../../assets/15.png";
-import ground4 from "../../assets/16.png";
-import star from "../../assets/star.png";
-import bomb from "../../assets/bomb.png";
-import dude from "../../assets/dude.png";
-import StartScene from "./StartScene.js"
 
 export default class GameScene extends Phaser.Scene {
 
@@ -27,6 +18,8 @@ export default class GameScene extends Phaser.Scene {
 
   preload ()
   {
+    this.load.path = '../../assets/';
+
     let progressBar = this.add.graphics();
     let progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.8);
@@ -72,15 +65,21 @@ export default class GameScene extends Phaser.Scene {
     ],{
         instances: 2
     });
-    this.load.image('sky', sky);
-    this.load.image('ground1', ground1); //soil
-    this.load.image('ground2', ground2);
-    this.load.image('ground3', ground3);
-    this.load.image('ground4', ground4);
-    this.load.image('star', star);
-    this.load.image('bomb', bomb);
-    this.load.spritesheet('dude', dude, { frameWidth: 32, frameHeight: 48 });
-    this.load.spritesheet('fullscreen', dude, { frameWidth: 32, frameHeight: 48 });
+    this.load.image('bg', 'BG.png');
+    this.load.image('ground1', '13.png'); //soil
+    this.load.image('ground2', '14.png');
+    this.load.image('ground3', '15.png');
+    this.load.image('ground4', '16.png');
+    this.load.image('star', 'star.png');
+    this.load.image('bomb', 'bomb.png');
+
+    for(let i=1; i<=20; i++) {
+      this.load.image(`girlRun${i}`, `girl/Run (${i}).png`);
+    }
+
+    for(let i=1; i<=16; i++) {
+      this.load.image(`girlIdle${i}`, `girl/Idle (${i}).png`);
+    }
 
     this.load.on('progress', function (value) {
       progressBar.clear();
@@ -110,8 +109,8 @@ export default class GameScene extends Phaser.Scene {
         seek: 2.550
     });
 
-    this.add.image(400, 300, 'sky');
-
+    let background = this.add.image(400, 300, 'bg');
+    background.setTint('0x555555');
     this.setupPlatforms();
     this.setupPlayer();
     this.createPlayerAnimations();
@@ -145,14 +144,16 @@ export default class GameScene extends Phaser.Scene {
     const cursors = this.cursors;
 
     if (cursors.left.isDown) {
-      this.player.setVelocityX(-160);
+      this.player.setVelocityX(-360);
       this.player.anims.play('left', true);
+      this.player.flipX = true;
     } else if (cursors.right.isDown) {
-      this.player.setVelocityX(160);
+      this.player.setVelocityX(360);
       this.player.anims.play('right', true);
+      this.player.flipX = false;
     } else  {
       this.player.setVelocityX(0);
-      this.player.anims.play('turn');
+      this.player.anims.play('turn', true);
     }
 
     if (cursors.up.isDown && this.player.body.touching.down) {
@@ -203,12 +204,11 @@ export default class GameScene extends Phaser.Scene {
     this.platforms.create(500, 400, 'ground2');
     this.platforms.create(628, 400, 'ground3');
     this.platforms.create(756, 400, 'ground4');
-/*    this.platforms.create(50, 250, 'ground3');
-    this.platforms.create(750, 220, 'ground');*/
   }
 
   setupPlayer () {
-    this.player = this.physics.add.sprite(100, 450, 'dude');
+    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
+    this.player.setScale(0.2);
 
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
@@ -217,37 +217,40 @@ export default class GameScene extends Phaser.Scene {
   createPlayerAnimations () {
     this.anims.create({
       key: 'left',
-      frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-      frameRate: 10,
+      frames: this.getGirlRunFrames(),
+      frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'turn',
-      frames: [ { key: 'dude', frame: 4 } ],
-      frameRate: 20
+      frames: this.getGirlIdleFrames(),
+      frameRate: 20,
+      repeat: -1
     });
 
     this.anims.create({
       key: 'right',
-      frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-      frameRate: 10,
+      frames: this.getGirlRunFrames(),
+      frameRate: 20,
       repeat: -1
     });   
+  }
 
-    /*PLAYER ANIM SEPARATE PNG*/
-/*    this.anims.create({
-        key: 'snooze',
-        frames: [
-            { key: 'cat1', frame: null },
-            { key: 'cat2', frame: null },
-            { key: 'cat3', frame: null },
-            { key: 'cat4', frame: null, duration: 50 }
-        ],
-        frameRate: 8,
-        repeat: -1
-    });*/
+  getGirlRunFrames () {
+    let frames = [];
+    for (let i=1; i<=20; i++) {
+      frames.push({ key: `girlRun${i}` })
+    }
+    return frames;
+  }
 
+  getGirlIdleFrames () {
+    let frames = [];
+    for (let i=1; i<=16; i++) {
+      frames.push({ key: `girlIdle${i}` })
+    }
+    return frames;    
   }
 
   collectStar (player, star)
@@ -281,7 +284,7 @@ export default class GameScene extends Phaser.Scene {
 
     player.setTint(0xff0000);
 
-    player.anims.play('turn');
+    player.anims.pause();
 
     this.gameOver = true;
     
