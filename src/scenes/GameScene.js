@@ -81,6 +81,10 @@ export default class GameScene extends Phaser.Scene {
       this.load.image(`girlIdle${i}`, `girl/Idle (${i}).png`);
     }
 
+    for(let i=1; i<=30; i++) {
+      this.load.image(`girlDead${i}`, `girl/Dead (${i}).png`);
+    }
+
     this.load.on('progress', function (value) {
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
@@ -138,8 +142,12 @@ export default class GameScene extends Phaser.Scene {
 
   update ()
   {
-    if (this.gameOver)
-      return
+    if (this.gameOver) {
+      if (this.player.y > 455) {
+        this.physics.pause()
+      }
+      return;
+    }
 
     const cursors = this.cursors;
 
@@ -153,7 +161,7 @@ export default class GameScene extends Phaser.Scene {
       this.player.flipX = false;
     } else  {
       this.player.setVelocityX(0);
-      this.player.anims.play('turn', true);
+      this.player.anims.play('idle', true);
     }
 
     if (cursors.up.isDown && this.player.body.touching.down) {
@@ -223,7 +231,7 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: 'turn',
+      key: 'idle',
       frames: this.getGirlIdleFrames(),
       frameRate: 20,
       repeat: -1
@@ -235,6 +243,13 @@ export default class GameScene extends Phaser.Scene {
       frameRate: 20,
       repeat: -1
     });   
+
+    this.anims.create({
+      key: 'die',
+      frames: this.getGirlDeadFrames(),
+      frameRate: 20
+    });
+
   }
 
   getGirlRunFrames () {
@@ -251,6 +266,14 @@ export default class GameScene extends Phaser.Scene {
       frames.push({ key: `girlIdle${i}` })
     }
     return frames;    
+  }
+
+  getGirlDeadFrames () {
+    let frames = [];
+    for (let i=1; i<=30; i++) {
+      frames.push({ key: `girlDead${i}` })
+    }
+    return frames;        
   }
 
   collectStar (player, star)
@@ -280,11 +303,9 @@ export default class GameScene extends Phaser.Scene {
 
   hitBomb (player, bomb)
   {
-    this.physics.pause();
-
-    player.setTint(0xff0000);
-
-    player.anims.pause();
+    if (!this.gameOver) {
+      player.anims.play('die');
+    }
 
     this.gameOver = true;
     
