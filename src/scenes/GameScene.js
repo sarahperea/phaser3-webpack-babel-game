@@ -112,7 +112,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.bgMusic.play();
 
-    let background = this.add.image(400, 300, 'bg');
+    let background = this.add.image(0, 0, 'bg').setOrigin(0,0);
     background.setTint('0x555555');
     this.setupPlatforms();
     this.setupPlayer();
@@ -204,13 +204,13 @@ export default class GameScene extends Phaser.Scene {
     this.platforms = this.physics.add.staticGroup({
       key: 'ground1',
       repeat: 11, //creates 12 stars
-      setXY: { x: 0, y: 560, stepX: 70 } //stepX is distance
+      setXY: { x: 0, y: 600, stepX: 70 } //stepX is distance
     });
 
     // this.platforms.create(400, 580, 'ground').setScale(2).refreshBody();
-    this.platforms.create(500, 370, 'ground2');
-    this.platforms.create(628, 370, 'ground3');
-    this.platforms.create(756, 370, 'ground4');
+    this.platforms.create(500, 410, 'ground2');
+    this.platforms.create(628, 410, 'ground3');
+    this.platforms.create(756, 410, 'ground4');
   }
 
   setupPlayer () {
