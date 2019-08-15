@@ -18,5 +18,6 @@
 | Asset | Source |
 |---------|-------------|
 | Cute Girl | https://www.gameart2d.com/cute-girl-free-sprites.html |
+| Cute Boy | https://www.gameart2d.com/the-boy---free-sprites.html |
 | Platforms | https://www.gameart2d.com/platformer-game-tileset-5.html |
 
