@@ -3,7 +3,12 @@ export default class StartScene extends Phaser.Scene {
     super('StartScene');
 
     this.cuteGirl = null;
+    this.girlRect = null;
+    this.girlHovered = false;
+
     this.cuteBoy = null;
+    this.boyRect = null;
+    this.boyHovered = false;
   }
 
   preload () {
@@ -16,21 +21,36 @@ export default class StartScene extends Phaser.Scene {
     for(let i=1; i<=15; i++) {
       this.load.image(`boyIdle${i}`, `boy/Idle (${i}).png`);
     }
+
+    for(let i=1; i<=10; i++) {
+      this.load.image(`girlJump${i}`, `girl/Jump (${i}).png`);
+    }
+
+    for(let i=1; i<=10; i++) {
+      this.load.image(`boyJump${i}`, `boy/Jump (${i}).png`);
+    }
   }
 
   create () {
-    // this.add.text(95, 250, 'Click to Start!', { fontSize: '30px', fill: '#ffffff' });
     this.add.text(220, 100, 'Choose your character and play!', { fontSize: '20px', fill: '#ffffff'});
 
-    this.add.rectangle(280, 360, 200, 300, 0x000000, 1);
-    this.cuteGirl = this.add.sprite(280, 370, 'cuteGirl').setScale(0.40);
+    this.girlRect = this.add.rectangle(280, 360, 200, 300, 0x000000, 1);
+    this.cuteGirl = this.add.sprite(280, 370, 'cuteGirl').setScale(0.4);
     this.add.text(260, 520, 'sarah', { fontSize: '18px', fill: '#ffffff'});
+    this.girlRect.setInteractive();
 
-    this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
+    this.boyRect = this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
     this.cuteBoy = this.add.sprite(600, 360, 'cuteBoy').setScale(0.5);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
+    this.boyRect.setInteractive();
 
     this.createPlayerAnimations();
+
+    this.girlRect.on('pointerover', () => this.girlHovered = true );
+    this.girlRect.on('pointerout', () => this.girlHovered = false );
+
+    this.boyRect.on('pointerover', () => this.boyHovered = true );
+    this.boyRect.on('pointerout', () => this.boyHovered = false );
 
     this.input.on('pointerdown', () => {
       this.scene.stop('StarScene')
@@ -39,8 +59,11 @@ export default class StartScene extends Phaser.Scene {
   }
 
   update () {
-    this.cuteGirl.anims.play('girlIdle', true);
-    this.cuteBoy.anims.play('boyIdle', true)
+    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
+    else this.cuteGirl.anims.play('girlJump', true);
+
+    if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
+    else this.cuteBoy.anims.play('boyJump', true);
   }
 
   createPlayerAnimations () {
@@ -52,8 +75,22 @@ export default class StartScene extends Phaser.Scene {
     });
 
     this.anims.create({
+      key: 'girlJump',
+      frames: this.getGirlJumpFrames(),
+      frameRate: 20,
+      repeat: -1
+    });
+
+    this.anims.create({
       key: 'boyIdle',
       frames: this.getBoyIdleFrames(),
+      frameRate: 20,
+      repeat: -1
+    });
+
+    this.anims.create({
+      key: 'boyJump',
+      frames: this.getBoyJumpFrames(),
       frameRate: 20,
       repeat: -1
     });
@@ -68,10 +105,26 @@ export default class StartScene extends Phaser.Scene {
     return frames;    
   }
 
+  getGirlJumpFrames () {
+    let frames = [];
+    for (let i=1; i<=10; i++) {
+      frames.push({ key: `girlJump${i}` })
+    }
+    return frames;    
+  }
+
   getBoyIdleFrames () {
     let frames = [];
     for (let i=1; i<=15; i++) {
       frames.push({ key: `boyIdle${i}` })
+    }
+    return frames;    
+  }
+
+  getBoyJumpFrames () {
+    let frames = [];
+    for (let i=1; i<=10; i++) {
+      frames.push({ key: `boyJump${i}` })
     }
     return frames;    
   }
