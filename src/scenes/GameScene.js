@@ -1,4 +1,5 @@
 import ProgressBar from '../classes/ProgressBar.js';
+import Player from '../classes/Player.js';
 
 export default class GameScene extends Phaser.Scene {
 
@@ -20,9 +21,9 @@ export default class GameScene extends Phaser.Scene {
 
   preload ()
   {
-    this.load.path = '../../assets/';
-
     let progressBar = new ProgressBar(this);
+
+    this.load.path = '../../assets/';
 
     this.load.audio('theme', [
         '../../assets/audio/jackinthebox.mp3'
@@ -58,8 +59,8 @@ export default class GameScene extends Phaser.Scene {
     });
      
     this.load.on('complete', function () {
-      progressBar.progressBar.destroy();
-      progressBar.progressBox.destroy();
+      progressBar.bar.destroy();
+      progressBar.box.destroy();
       progressBar.loadingText.destroy();
       progressBar.percentText.destroy();
       progressBar.assetText.destroy();
@@ -174,11 +175,12 @@ export default class GameScene extends Phaser.Scene {
   }
 
   setupPlayer () {
-    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
+/*    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
     this.player.setScale(0.17);
 
     this.player.setBounce(0.2);
-    this.player.setCollideWorldBounds(true);
+    this.player.setCollideWorldBounds(true);*/
+    this.player = new Player(this).player;
   }
 
   createPlayerAnimations () {

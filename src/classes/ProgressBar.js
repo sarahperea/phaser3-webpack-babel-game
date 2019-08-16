@@ -7,8 +7,8 @@ export default class ProgressBar {
 	}
 
 	init () {
-		this.progressBar = this.scene.add.graphics();
-		this.progressBox = this.scene.add.graphics()
+		this.bar = this.scene.add.graphics();
+		this.box = this.scene.add.graphics()
 			.fillStyle(0x222222, 0.8)
 			.fillRect(240, 270, 320, 50);
 
@@ -30,7 +30,7 @@ export default class ProgressBar {
 	};
 
 	getProgress (value) {
-		this.progressBar
+		this.bar
 			.clear()
         	.fillStyle(0xffffff, 1)
         	.fillRect(250, 280, 300 * value, 30);
