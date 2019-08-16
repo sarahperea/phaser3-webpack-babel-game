@@ -273,11 +273,22 @@ export default class GameScene extends Phaser.Scene {
     this.add.text(286, 346, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
 
     this.input.on('pointerdown', () => {
+      this.resetGame();
+    });
+
+    this.spaceKey = this.input.keyboard.addKey('space');
+    this.spaceKey.on('down', () => {
+      this.resetGame();
+    })
+  }
+
+  resetGame () {
+    if (this.gameOver) {
       this.score = 0;
       this.gameOver = false;
       this.bgMusic.stop();
-      this.scene.restart();
-    });
+      this.scene.restart();      
+    }
   }
 
   setupCollidersAndOverlaps () {
