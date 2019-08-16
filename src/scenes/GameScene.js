@@ -267,9 +267,10 @@ export default class GameScene extends Phaser.Scene {
     player.anims.play('die');
     this.gameOver = true;
     
-    this.add.rectangle(400, 300, 280, 60, 0x000000, 1);
-    this.add.text(320, 276, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
-    this.add.text(286, 306, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
+    this.add.rectangle(400, 310, 280, 130, 0x000000, 1);
+    this.add.text(320, 260, `Score: ${this.score}`, { fontSize: '28px', fill: '#ffffff' });
+    this.add.text(330, 320, 'Game Over :(', { fontSize: '20px', fill: '#ffffff' });
+    this.add.text(286, 346, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
 
     this.input.on('pointerdown', () => {
       this.score = 0;
