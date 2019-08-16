@@ -1,3 +1,5 @@
+import ProgressBar from '../classes/ProgressBar.js';
+import Player from '../classes/Player.js';
 
 export default class GameScene extends Phaser.Scene {
 
@@ -19,47 +21,9 @@ export default class GameScene extends Phaser.Scene {
 
   preload ()
   {
+    let progressBar = new ProgressBar(this);
+
     this.load.path = '../../assets/';
-
-    let progressBar = this.add.graphics();
-    let progressBox = this.add.graphics();
-    progressBox.fillStyle(0x222222, 0.8);
-    progressBox.fillRect(240, 270, 320, 50);
-
-    const width = this.cameras.main.width;
-    const height = this.cameras.main.height;
-    let loadingText = this.make.text({
-      x: width / 2,
-      y: height / 2 - 50,
-      text: 'Loading...',
-      style: {
-          font: '20px monospace',
-          fill: '#ffffff'
-      }
-    });
-    loadingText.setOrigin(0.5, 0.5);
-
-    let percentText = this.make.text({
-    x: width / 2,
-    y: height / 2 - 5,
-    text: '0%',
-    style: {
-      font: '18px monospace',
-      fill: '#ffffff'
-    }
-    });
-    percentText.setOrigin(0.5, 0.5);
-
-    let assetText = this.make.text({
-      x: width / 2,
-      y: height / 2 + 50,
-      text: '',
-      style: {
-          font: '18px monospace',
-          fill: '#ffffff'
-      }
-    });
-    assetText.setOrigin(0.5, 0.5);
 
     this.load.audio('theme', [
         '../../assets/audio/jackinthebox.mp3'
@@ -87,22 +51,19 @@ export default class GameScene extends Phaser.Scene {
     }
 
     this.load.on('progress', function (value) {
-      progressBar.clear();
-      progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(250, 280, 300 * value, 30);
-      percentText.setText(parseInt(value * 100) + '%');
+      progressBar.getProgress(value);
     });
                 
     this.load.on('fileprogress', function (file) {
-      assetText.setText('Loading asset: ' + file.src);
+      progressBar.getFileProgress(file);
     });
      
     this.load.on('complete', function () {
-      progressBar.destroy();
-      progressBox.destroy();
-      loadingText.destroy();
-      percentText.destroy();
-      assetText.destroy();
+      progressBar.bar.destroy();
+      progressBar.box.destroy();
+      progressBar.loadingText.destroy();
+      progressBar.percentText.destroy();
+      progressBar.assetText.destroy();
     });
   }
 
@@ -214,11 +175,12 @@ export default class GameScene extends Phaser.Scene {
   }
 
   setupPlayer () {
-    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
+/*    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
     this.player.setScale(0.17);
 
     this.player.setBounce(0.2);
-    this.player.setCollideWorldBounds(true);
+    this.player.setCollideWorldBounds(true);*/
+    this.player = new Player(this).player;
   }
 
   createPlayerAnimations () {
@@ -305,16 +267,28 @@ export default class GameScene extends Phaser.Scene {
     player.anims.play('die');
     this.gameOver = true;
     
-    this.add.rectangle(400, 300, 280, 60, 0x000000, 1);
-    this.add.text(320, 276, 'Game Over :(', { fontSize: '24px', fill: '#ffffff' });
-    this.add.text(286, 306, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
+    this.add.rectangle(400, 310, 280, 130, 0x000000, 1);
+    this.add.text(320, 260, `Score: ${this.score}`, { fontSize: '28px', fill: '#ffffff' });
+    this.add.text(330, 320, 'Game Over :(', { fontSize: '20px', fill: '#ffffff' });
+    this.add.text(286, 346, 'Click the screen to restart', { fontSize: '14px', fill: '#ffffff' })
 
     this.input.on('pointerdown', () => {
+      this.resetGame();
+    });
+
+    this.spaceKey = this.input.keyboard.addKey('space');
+    this.spaceKey.on('down', () => {
+      this.resetGame();
+    })
+  }
+
+  resetGame () {
+    if (this.gameOver) {
       this.score = 0;
       this.gameOver = false;
       this.bgMusic.stop();
-      this.scene.restart();
-    });
+      this.scene.restart();      
+    }
   }
 
   setupCollidersAndOverlaps () {
