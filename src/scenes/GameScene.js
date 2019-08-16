@@ -1,3 +1,4 @@
+import ProgressBar from '../classes/ProgressBar.js';
 
 export default class GameScene extends Phaser.Scene {
 
@@ -21,45 +22,7 @@ export default class GameScene extends Phaser.Scene {
   {
     this.load.path = '../../assets/';
 
-    let progressBar = this.add.graphics();
-    let progressBox = this.add.graphics();
-    progressBox.fillStyle(0x222222, 0.8);
-    progressBox.fillRect(240, 270, 320, 50);
-
-    const width = this.cameras.main.width;
-    const height = this.cameras.main.height;
-    let loadingText = this.make.text({
-      x: width / 2,
-      y: height / 2 - 50,
-      text: 'Loading...',
-      style: {
-          font: '20px monospace',
-          fill: '#ffffff'
-      }
-    });
-    loadingText.setOrigin(0.5, 0.5);
-
-    let percentText = this.make.text({
-    x: width / 2,
-    y: height / 2 - 5,
-    text: '0%',
-    style: {
-      font: '18px monospace',
-      fill: '#ffffff'
-    }
-    });
-    percentText.setOrigin(0.5, 0.5);
-
-    let assetText = this.make.text({
-      x: width / 2,
-      y: height / 2 + 50,
-      text: '',
-      style: {
-          font: '18px monospace',
-          fill: '#ffffff'
-      }
-    });
-    assetText.setOrigin(0.5, 0.5);
+    let progressBar = new ProgressBar(this);
 
     this.load.audio('theme', [
         '../../assets/audio/jackinthebox.mp3'
@@ -87,22 +50,19 @@ export default class GameScene extends Phaser.Scene {
     }
 
     this.load.on('progress', function (value) {
-      progressBar.clear();
-      progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(250, 280, 300 * value, 30);
-      percentText.setText(parseInt(value * 100) + '%');
+      progressBar.getProgress(value);
     });
                 
     this.load.on('fileprogress', function (file) {
-      assetText.setText('Loading asset: ' + file.src);
+      progressBar.getFileProgress(file);
     });
      
     this.load.on('complete', function () {
-      progressBar.destroy();
-      progressBox.destroy();
-      loadingText.destroy();
-      percentText.destroy();
-      assetText.destroy();
+      progressBar.progressBar.destroy();
+      progressBar.progressBox.destroy();
+      progressBar.loadingText.destroy();
+      progressBar.percentText.destroy();
+      progressBar.assetText.destroy();
     });
   }
 
