@@ -6,17 +6,6 @@ export default class GameScene extends Phaser.Scene {
   constructor ()
   {
     super('GameScene');
-
-    this.player = null;
-    this.platforms = null;
-    this.stars = null;
-    this.bombs = null;
-    this.cursors = null;
-    this.score = 0;
-    this.gameOver = false;
-    this.scoreText = "";
-    this.sound = null;
-    this.bgMusic = null;
   }
 
   preload ()
@@ -69,6 +58,8 @@ export default class GameScene extends Phaser.Scene {
 
   create ()
   {
+    this.score = 0;
+
     this.bgMusic = this.sound.add('theme', {loop: true});
 
     this.bgMusic.play();
@@ -103,9 +94,7 @@ export default class GameScene extends Phaser.Scene {
   update ()
   {
     if (this.gameOver) {
-      // if (this.player.y > 455) {
-        this.physics.pause()
-      // }
+      this.physics.pause()
       return;
     }
 
