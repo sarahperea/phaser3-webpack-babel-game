@@ -8,6 +8,12 @@ export default class GameScene extends Phaser.Scene {
     super('GameScene');
   }
 
+  init (data)
+  {
+    this.player = data.player;
+    this.gender = data.gender;
+  }
+
   preload ()
   {
     let progressBar = new ProgressBar(this);
@@ -26,18 +32,6 @@ export default class GameScene extends Phaser.Scene {
     this.load.image('ground4', '16.png');
     this.load.image('star', 'star.png');
     this.load.image('bomb', 'bomb.png');
-
-    for(let i=1; i<=20; i++) {
-      this.load.image(`girlRun${i}`, `girl/Run (${i}).png`);
-    }
-
-    for(let i=1; i<=16; i++) {
-      this.load.image(`girlIdle${i}`, `girl/Idle (${i}).png`);
-    }
-
-    for(let i=1; i<=30; i++) {
-      this.load.image(`girlDead${i}`, `girl/Dead (${i}).png`);
-    }
 
     this.load.on('progress', function (value) {
       progressBar.getProgress(value);
@@ -68,7 +62,6 @@ export default class GameScene extends Phaser.Scene {
     background.setTint('0x555555');
     this.setupPlatforms();
     this.setupPlayer();
-    this.createPlayerAnimations();
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
@@ -102,20 +95,21 @@ export default class GameScene extends Phaser.Scene {
 
     if (cursors.left.isDown) {
       this.player.setVelocityX(-360);
-      this.player.anims.play('left', true);
+      this.player.anims.play(`${this.gender}Run`, true);
       this.player.flipX = true;
     } else if (cursors.right.isDown) {
       this.player.setVelocityX(360);
-      this.player.anims.play('right', true);
-      this.player.flipX = false;
+      this.player.anims.play(`${this.gender}Run`, true);
+      this.player.flipX = false;        
     } else  {
       this.player.setVelocityX(0);
-      this.player.anims.play('idle', true);
+      this.player.anims.play(`${this.gender}Idle`, true);
     }
 
     if (cursors.up.isDown && this.player.body.touching.down) {
       this.player.setVelocityY(-330);
     }
+
   }
 
 /*  createFullScreenBtn () {
@@ -164,66 +158,12 @@ export default class GameScene extends Phaser.Scene {
   }
 
   setupPlayer () {
-/*    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
+    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
     this.player.setScale(0.17);
 
     this.player.setBounce(0.2);
-    this.player.setCollideWorldBounds(true);*/
-    this.player = new Player(this).player;
-  }
-
-  createPlayerAnimations () {
-    this.anims.create({
-      key: 'left',
-      frames: this.getGirlRunFrames(),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'idle',
-      frames: this.getGirlIdleFrames(),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'right',
-      frames: this.getGirlRunFrames(),
-      frameRate: 20,
-      repeat: -1
-    });   
-
-    this.anims.create({
-      key: 'die',
-      frames: this.getGirlDeadFrames(),
-      frameRate: 20
-    });
-
-  }
-
-  getGirlRunFrames () {
-    let frames = [];
-    for (let i=1; i<=20; i++) {
-      frames.push({ key: `girlRun${i}` })
-    }
-    return frames;
-  }
-
-  getGirlIdleFrames () {
-    let frames = [];
-    for (let i=1; i<=16; i++) {
-      frames.push({ key: `girlIdle${i}` })
-    }
-    return frames;    
-  }
-
-  getGirlDeadFrames () {
-    let frames = [];
-    for (let i=1; i<=30; i++) {
-      frames.push({ key: `girlDead${i}` })
-    }
-    return frames;        
+    this.player.setCollideWorldBounds(true);
+    // this.player = new Player(this).player;
   }
 
   collectStar (player, star)
@@ -253,7 +193,7 @@ export default class GameScene extends Phaser.Scene {
 
   hitBomb (player, bomb)
   {
-    player.anims.play('die');
+    player.anims.play(`${this.gender}Die`);
     this.gameOver = true;
     
     this.add.rectangle(400, 310, 280, 130, 0x000000, 1);

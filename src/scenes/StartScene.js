@@ -18,12 +18,20 @@ export default class StartScene extends Phaser.Scene {
       this.load.image(`girlIdle${i}`, `girl/Idle (${i}).png`);
     }
 
-    for(let i=1; i<=15; i++) {
-      this.load.image(`boyIdle${i}`, `boy/Idle (${i}).png`);
-    }
-
     for(let i=1; i<=10; i++) {
       this.load.image(`girlJump${i}`, `girl/Jump (${i}).png`);
+    }
+
+    for(let i=1; i<=20; i++) {
+      this.load.image(`girlRun${i}`, `girl/Run (${i}).png`);
+    }
+
+    for(let i=1; i<=30; i++) {
+      this.load.image(`girlDead${i}`, `girl/Dead (${i}).png`);
+    }      
+
+    for(let i=1; i<=15; i++) {
+      this.load.image(`boyIdle${i}`, `boy/Idle (${i}).png`);
     }
 
     for(let i=1; i<=10; i++) {
@@ -52,9 +60,16 @@ export default class StartScene extends Phaser.Scene {
     this.boyRect.on('pointerover', () => this.boyHovered = true );
     this.boyRect.on('pointerout', () => this.boyHovered = false );
 
-    this.input.on('pointerdown', () => {
+    this.girlRect.on('pointerdown', () => {
+      this.player = this.cuteGirl;
       this.scene.stop('StarScene')
-      this.scene.start('GameScene')
+      this.scene.start('GameScene', { player: this.player, gender: 'girl' })
+    })
+
+    this.boyRect.on('pointerdown', () => {
+      this.player = this.cuteBoy;
+      this.scene.stop('StarScene')
+      this.scene.start('GameScene', { player: this.player, gender: 'boy' })
     })
   }
 
@@ -80,6 +95,21 @@ export default class StartScene extends Phaser.Scene {
       frameRate: 20,
       repeat: -1
     });
+
+    this.anims.create({
+      key: 'girlRun',
+      frames: this.getGirlRunFrames(),
+      frameRate: 20,
+      repeat: -1
+    });
+
+    this.anims.create({
+      key: 'girlDie',
+      frames: this.getGirlDeadFrames(),
+      frameRate: 20,
+      repeat: -1
+    });
+
 
     this.anims.create({
       key: 'boyIdle',
@@ -111,6 +141,22 @@ export default class StartScene extends Phaser.Scene {
       frames.push({ key: `girlJump${i}` })
     }
     return frames;    
+  }
+
+  getGirlRunFrames () {
+    let frames = [];
+    for (let i=1; i<=20; i++) {
+      frames.push({ key: `girlRun${i}` })
+    }
+    return frames;
+  }
+
+  getGirlDeadFrames () {
+    let frames = [];
+    for (let i=1; i<=30; i++) {
+      frames.push({ key: `girlDead${i}` })
+    }
+    return frames;        
   }
 
   getBoyIdleFrames () {
