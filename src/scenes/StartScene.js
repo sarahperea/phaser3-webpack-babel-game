@@ -1,7 +1,9 @@
 export default class StartScene extends Phaser.Scene {
   constructor() {
     super('StartScene');
+  }
 
+  init () {
     this.cuteGirl = null;
     this.girlRect = null;
     this.girlHovered = false;
@@ -9,6 +11,8 @@ export default class StartScene extends Phaser.Scene {
     this.cuteBoy = null;
     this.boyRect = null;
     this.boyHovered = false;
+
+    this.player = null;
   }
 
   preload () {
@@ -37,6 +41,14 @@ export default class StartScene extends Phaser.Scene {
     for(let i=1; i<=10; i++) {
       this.load.image(`boyJump${i}`, `boy/Jump (${i}).png`);
     }
+
+    for(let i=1; i<=15; i++) {
+      this.load.image(`boyRun${i}`, `boy/Run (${i}).png`);
+    }
+
+    for(let i=1; i<=15; i++) {
+      this.load.image(`boyDead${i}`, `boy/Dead (${i}).png`);
+    }      
   }
 
   create () {
@@ -48,7 +60,7 @@ export default class StartScene extends Phaser.Scene {
     this.girlRect.setInteractive();
 
     this.boyRect = this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
-    this.cuteBoy = this.add.sprite(600, 360, 'cuteBoy').setScale(0.5);
+    this.cuteBoy = this.add.sprite(600, 360, 'cuteBoy').setScale(0.4);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
     this.boyRect.setInteractive();
 
@@ -107,9 +119,7 @@ export default class StartScene extends Phaser.Scene {
       key: 'girlDie',
       frames: this.getGirlDeadFrames(),
       frameRate: 20,
-      repeat: -1
     });
-
 
     this.anims.create({
       key: 'boyIdle',
@@ -125,6 +135,18 @@ export default class StartScene extends Phaser.Scene {
       repeat: -1
     });
 
+    this.anims.create({
+      key: 'boyRun',
+      frames: this.getBoyRunFrames(),
+      frameRate: 20,
+      repeat: -1
+    });
+
+    this.anims.create({
+      key: 'boyDie',
+      frames: this.getBoyDeadFrames(),
+      frameRate: 20,
+    });
   }
 
   getGirlIdleFrames () {
@@ -175,4 +197,19 @@ export default class StartScene extends Phaser.Scene {
     return frames;    
   }
 
+  getBoyRunFrames () {
+    let frames = [];
+    for (let i=1; i<=15; i++) {
+      frames.push({ key: `boyRun${i}` })
+    }
+    return frames;    
+  }
+
+  getBoyDeadFrames () {
+    let frames = [];
+    for (let i=1; i<=15; i++) {
+      frames.push({ key: `boyDead${i}` })
+    }
+    return frames;    
+  }
 }

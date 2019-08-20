@@ -95,11 +95,23 @@ export default class GameScene extends Phaser.Scene {
 
     if (cursors.left.isDown) {
       this.player.setVelocityX(-360);
+      if (this.gender === 'boy' && this.right) {
+       this.player.x -= 40;
+       this.right = false;
+       this.left = true; 
+      }
       this.player.anims.play(`${this.gender}Run`, true);
       this.player.flipX = true;
     } else if (cursors.right.isDown) {
+      this.right = true;
+      if (this.gender === 'boy' && this.left) {
+         this.player.x += 40;
+         this.left = false;
+         this.right = true; 
+      }
       this.player.setVelocityX(360);
       this.player.anims.play(`${this.gender}Run`, true);
+
       this.player.flipX = false;        
     } else  {
       this.player.setVelocityX(0);
