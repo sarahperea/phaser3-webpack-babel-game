@@ -13,7 +13,6 @@ export default class StartScene extends Phaser.Scene {
     this.boyHovered = false;
 
     this.player = null;
-
     this.playerSprites = {
       girl: {
         Idle: 16,
@@ -33,8 +32,9 @@ export default class StartScene extends Phaser.Scene {
   preload () {
     this.load.path = '../../assets/';
 
-    for (let [key1, value1] of Object.entries(this.playerSprites)) {
-      for (let [key, value] of Object.entries(this.playerSprites[key1])) {
+    let sprites = this.playerSprites;
+    for (let [key1, value1] of Object.entries(sprites)) {
+      for (let [key, value] of Object.entries(sprites[key1])) {
         for (let i=1; i<=value; i++) {
           this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
         }
@@ -88,120 +88,64 @@ export default class StartScene extends Phaser.Scene {
   createPlayerAnimations () {
     this.anims.create({
       key: 'girlIdle',
-      frames: this.getGirlIdleFrames(),
+      frames: this.getFrames('girl', 'Idle'),
       frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'girlJump',
-      frames: this.getGirlJumpFrames(),
+      frames: this.getFrames('girl', 'Jump'),
       frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'girlRun',
-      frames: this.getGirlRunFrames(),
+      frames: this.getFrames('girl', 'Run'),
       frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'girlDie',
-      frames: this.getGirlDeadFrames(),
+      frames: this.getFrames('girl', 'Dead'),
       frameRate: 20,
     });
 
     this.anims.create({
       key: 'boyIdle',
-      frames: this.getBoyIdleFrames(),
+      frames: this.getFrames('boy', 'Idle'),
       frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'boyJump',
-      frames: this.getBoyJumpFrames(),
+      frames: this.getFrames('boy', 'Jump'),
       frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'boyRun',
-      frames: this.getBoyRunFrames(),
+      frames: this.getFrames('boy', 'Run'),
       frameRate: 20,
       repeat: -1
     });
 
     this.anims.create({
       key: 'boyDie',
-      frames: this.getBoyDeadFrames(),
+      frames: this.getFrames('boy', 'Dead'),
       frameRate: 20,
     });
   }
 
-  getGirlIdleFrames () {
+  getFrames (gender, action) {
     let frames = [];
-    for (let i=1; i<=16; i++) {
-      frames.push({ key: `girlIdle${i}` })
-    }
-    return frames;    
-  }
-
-  getGirlJumpFrames () {
-    let frames = [];
-    for (let i=1; i<=10; i++) {
-      frames.push({ key: `girlJump${i}` })
-    }
-    return frames;    
-  }
-
-  getGirlRunFrames () {
-    let frames = [];
-    for (let i=1; i<=20; i++) {
-      frames.push({ key: `girlRun${i}` })
+    for (let i=1; i<=this.playerSprites[gender][action]; i++) {
+      frames.push({ key: `${gender}${action}${i}` });
     }
     return frames;
-  }
-
-  getGirlDeadFrames () {
-    let frames = [];
-    for (let i=1; i<=30; i++) {
-      frames.push({ key: `girlDead${i}` })
-    }
-    return frames;        
-  }
-
-  getBoyIdleFrames () {
-    let frames = [];
-    for (let i=1; i<=15; i++) {
-      frames.push({ key: `boyIdle${i}` })
-    }
-    return frames;    
-  }
-
-  getBoyJumpFrames () {
-    let frames = [];
-    for (let i=1; i<=10; i++) {
-      frames.push({ key: `boyJump${i}` })
-    }
-    return frames;    
-  }
-
-  getBoyRunFrames () {
-    let frames = [];
-    for (let i=1; i<=15; i++) {
-      frames.push({ key: `boyRun${i}` })
-    }
-    return frames;    
-  }
-
-  getBoyDeadFrames () {
-    let frames = [];
-    for (let i=1; i<=15; i++) {
-      frames.push({ key: `boyDead${i}` })
-    }
-    return frames;    
   }
 }
