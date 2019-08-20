@@ -13,42 +13,34 @@ export default class StartScene extends Phaser.Scene {
     this.boyHovered = false;
 
     this.player = null;
+
+    this.playerSprites = {
+      girl: {
+        Idle: 16,
+        Jump: 10,
+        Run: 20,
+        Dead: 30
+      },
+      boy: {
+        Idle: 15,
+        Jump: 10,
+        Run: 15,
+        Dead: 15
+      }
+    };
   }
 
   preload () {
     this.load.path = '../../assets/';
 
-    for(let i=1; i<=16; i++) {
-      this.load.image(`girlIdle${i}`, `girl/Idle (${i}).png`);
+    for (let [key1, value1] of Object.entries(this.playerSprites)) {
+      for (let [key, value] of Object.entries(this.playerSprites[key1])) {
+        for (let i=1; i<=value; i++) {
+          this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
+        }
+      }      
     }
 
-    for(let i=1; i<=10; i++) {
-      this.load.image(`girlJump${i}`, `girl/Jump (${i}).png`);
-    }
-
-    for(let i=1; i<=20; i++) {
-      this.load.image(`girlRun${i}`, `girl/Run (${i}).png`);
-    }
-
-    for(let i=1; i<=30; i++) {
-      this.load.image(`girlDead${i}`, `girl/Dead (${i}).png`);
-    }      
-
-    for(let i=1; i<=15; i++) {
-      this.load.image(`boyIdle${i}`, `boy/Idle (${i}).png`);
-    }
-
-    for(let i=1; i<=10; i++) {
-      this.load.image(`boyJump${i}`, `boy/Jump (${i}).png`);
-    }
-
-    for(let i=1; i<=15; i++) {
-      this.load.image(`boyRun${i}`, `boy/Run (${i}).png`);
-    }
-
-    for(let i=1; i<=15; i++) {
-      this.load.image(`boyDead${i}`, `boy/Dead (${i}).png`);
-    }      
   }
 
   create () {

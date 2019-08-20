@@ -55,11 +55,13 @@ export default class GameScene extends Phaser.Scene {
     this.score = 0;
 
     this.bgMusic = this.sound.add('theme', {loop: true});
-
     this.bgMusic.play();
 
-    let background = this.add.image(0, 0, 'bg').setOrigin(0,0);
-    background.setTint('0x555555');
+    // background
+    this.add.image(0, 0, 'bg')
+      .setOrigin(0,0)
+      .setTint('0x555555');
+
     this.setupPlatforms();
     this.setupPlayer();
 
@@ -111,7 +113,6 @@ export default class GameScene extends Phaser.Scene {
       }
       this.player.setVelocityX(360);
       this.player.anims.play(`${this.gender}Run`, true);
-
       this.player.flipX = false;        
     } else  {
       this.player.setVelocityX(0);
