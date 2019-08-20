@@ -46,6 +46,22 @@ export default class StartScene extends Phaser.Scene {
   create () {
     this.add.text(220, 100, 'Choose your character and play!', { fontSize: '20px', fill: '#ffffff'});
 
+    this.createPlayerBoxes();
+
+    this.setPlayerMouseActions();    
+
+    this.createPlayerAnimations();
+  }
+
+  update () {
+    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
+    else this.cuteGirl.anims.play('girlJump', true);
+
+    if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
+    else this.cuteBoy.anims.play('boyJump', true);
+  }
+
+  createPlayerBoxes () {
     this.girlRect = this.add.rectangle(280, 360, 200, 300, 0x000000, 1);
     this.cuteGirl = this.add.sprite(280, 370, 'cuteGirl').setScale(0.4);
     this.add.text(260, 520, 'sarah', { fontSize: '18px', fill: '#ffffff'});
@@ -55,9 +71,9 @@ export default class StartScene extends Phaser.Scene {
     this.cuteBoy = this.add.sprite(600, 360, 'cuteBoy').setScale(0.4);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
     this.boyRect.setInteractive();
+  }
 
-    this.createPlayerAnimations();
-
+  setPlayerMouseActions () {
     this.girlRect.on('pointerover', () => this.girlHovered = true );
     this.girlRect.on('pointerout', () => this.girlHovered = false );
 
@@ -77,15 +93,12 @@ export default class StartScene extends Phaser.Scene {
     })
   }
 
-  update () {
-    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
-    else this.cuteGirl.anims.play('girlJump', true);
-
-    if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
-    else this.cuteBoy.anims.play('boyJump', true);
+  createPlayerAnimations () {
+    this.createGirlAnims();
+    this.createBoyAnims();
   }
 
-  createPlayerAnimations () {
+  createGirlAnims () {
     this.anims.create({
       key: 'girlIdle',
       frames: this.getFrames('girl', 'Idle'),
@@ -112,7 +125,9 @@ export default class StartScene extends Phaser.Scene {
       frames: this.getFrames('girl', 'Dead'),
       frameRate: 20,
     });
+  }
 
+  createBoyAnims () {
     this.anims.create({
       key: 'boyIdle',
       frames: this.getFrames('boy', 'Idle'),
