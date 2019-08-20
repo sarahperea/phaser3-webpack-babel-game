@@ -206,7 +206,7 @@ export default class GameScene extends Phaser.Scene {
 
   hitBomb (player, bomb)
   {
-    player.anims.play(`${this.gender}Die`);
+    player.anims.play(`${this.gender}Dead`);
     this.gameOver = true;
     
     this.add.rectangle(400, 310, 280, 130, 0x000000, 1);

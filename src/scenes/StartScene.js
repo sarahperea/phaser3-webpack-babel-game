@@ -94,66 +94,19 @@ export default class StartScene extends Phaser.Scene {
   }
 
   createPlayerAnimations () {
-    this.createGirlAnims();
-    this.createBoyAnims();
-  }
-
-  createGirlAnims () {
-    this.anims.create({
-      key: 'girlIdle',
-      frames: this.getFrames('girl', 'Idle'),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'girlJump',
-      frames: this.getFrames('girl', 'Jump'),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'girlRun',
-      frames: this.getFrames('girl', 'Run'),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'girlDie',
-      frames: this.getFrames('girl', 'Dead'),
-      frameRate: 20,
-    });
-  }
-
-  createBoyAnims () {
-    this.anims.create({
-      key: 'boyIdle',
-      frames: this.getFrames('boy', 'Idle'),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'boyJump',
-      frames: this.getFrames('boy', 'Jump'),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'boyRun',
-      frames: this.getFrames('boy', 'Run'),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: 'boyDie',
-      frames: this.getFrames('boy', 'Dead'),
-      frameRate: 20,
-    });
+    let sprites = this.playerSprites;
+    for (let [key1, value1] of Object.entries(sprites)) {
+      for (let [key, value] of Object.entries(sprites[key1])) {
+        for (let i=1; i<=value; i++) {
+          this.anims.create({
+            key: `${key1}${key}`,
+            frames: this.getFrames(key1, key),
+            frameRate: 20,
+            repeat: key === 'Dead' ? 0 : -1
+          });
+        }
+      }      
+    }
   }
 
   getFrames (gender, action) {
