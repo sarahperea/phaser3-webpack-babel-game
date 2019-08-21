@@ -1,3 +1,5 @@
+import ProgressBar from '../classes/ProgressBar.js';
+
 export default class StartScene extends Phaser.Scene {
   constructor() {
     super('StartScene');
@@ -27,9 +29,12 @@ export default class StartScene extends Phaser.Scene {
         Dead: 15
       }
     };
+    this.progressBar = null;
   }
 
   preload () {
+    let progressBar = new ProgressBar(this);
+
     this.load.path = '../../assets/';
 
     let sprites = this.playerSprites;
@@ -41,6 +46,23 @@ export default class StartScene extends Phaser.Scene {
       }      
     }
 
+    this.load.on('progress', function (value) {
+      progressBar.getProgress(value);
+    });
+                
+    this.load.on('fileprogress', function (file) {
+      progressBar.getFileProgress(file);
+    });
+     
+    this.load.on('complete', function () {
+      progressBar.bar.destroy();
+      progressBar.box.destroy();
+      progressBar.loadingText.destroy();
+      progressBar.percentText.destroy();
+      progressBar.assetText.destroy();
+    });
+
+    this.progressBar = progressBar;
   }
 
   create () {
@@ -68,7 +90,7 @@ export default class StartScene extends Phaser.Scene {
     this.girlRect.setInteractive();
 
     this.boyRect = this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
-    this.cuteBoy = this.add.sprite(600, 360, 'cuteBoy').setScale(0.4);
+    this.cuteBoy = this.add.sprite(580, 370, 'cuteBoy').setScale(0.4);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
     this.boyRect.setInteractive();
   }
@@ -82,14 +104,14 @@ export default class StartScene extends Phaser.Scene {
 
     this.girlRect.on('pointerdown', () => {
       this.player = this.cuteGirl;
-      this.scene.stop('StarScene')
-      this.scene.start('GameScene', { player: this.player, gender: 'girl' })
+      this.scene.stop('StarScene');
+      this.scene.start('GameScene', { player: this.player, gender: 'girl' });
     })
 
     this.boyRect.on('pointerdown', () => {
       this.player = this.cuteBoy;
-      this.scene.stop('StarScene')
-      this.scene.start('GameScene', { player: this.player, gender: 'boy' })
+      this.scene.stop('StarScene');
+      this.scene.start('GameScene', { player: this.player, gender: 'boy' });
     })
   }
 

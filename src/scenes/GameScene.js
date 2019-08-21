@@ -83,7 +83,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.setupCollidersAndOverlaps();
 
-    // this.createFullScreenBtn();
+    this.createFullScreenBtn();
   }
 
   update ()
@@ -125,37 +125,43 @@ export default class GameScene extends Phaser.Scene {
 
   }
 
-/*  createFullScreenBtn () {
-    const button = this.add.image(800-16, 16, 'fullscreen', 0).setOrigin(1, 0).setInteractive();
+  createFullScreenBtn () {
+    const fullscreenBtn = this.add.image(800-60, 20, 'girlIdle1', 0).setScale(0.09).setOrigin(1, 0).setInteractive();
+    const mainMenuBtn = this.add.image(810, 11, 'boyIdle1', 0).setScale(0.1).setOrigin(1, 0).setInteractive();
 
-    button.on('pointerup', function () {
+    fullscreenBtn.on('pointerup', () => {
       if (this.scale.isFullscreen)
       {
-        button.setFrame(0);
+        fullscreenBtn.setFrame(0);
         this.scale.stopFullscreen();
       }
       else
       {
-        button.setFrame(1);
+        fullscreenBtn.setFrame(1);
         this.scale.startFullscreen();
       }
     }, this);
+
+    mainMenuBtn.on('pointerup', () => {
+      this.scene.stop('GameScene');
+      this.scene.start('StartScene');
+    });
 
     const FKey = this.input.keyboard.addKey('F');
 
-    FKey.on('down', function () {
+    FKey.on('down', () => {
       if (this.scale.isFullscreen)
       {
-        button.setFrame(0);
+        fullscreenBtn.setFrame(0);
         this.scale.stopFullscreen();
       }
       else
       {
-        button.setFrame(1);
+        fullscreenBtn.setFrame(1);
         this.scale.startFullscreen();
       }
     }, this);
-  }*/
+  }
 
   setupPlatforms () {
     this.platforms = this.physics.add.staticGroup({
