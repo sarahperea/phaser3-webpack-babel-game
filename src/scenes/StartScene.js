@@ -1,3 +1,5 @@
+import ProgressBar from '../classes/ProgressBar.js';
+
 export default class StartScene extends Phaser.Scene {
   constructor() {
     super('StartScene');
@@ -27,9 +29,12 @@ export default class StartScene extends Phaser.Scene {
         Dead: 15
       }
     };
+    this.progressBar = null;
   }
 
   preload () {
+    let progressBar = new ProgressBar(this);
+
     this.load.path = '../../assets/';
 
     let sprites = this.playerSprites;
@@ -41,6 +46,23 @@ export default class StartScene extends Phaser.Scene {
       }      
     }
 
+    this.load.on('progress', function (value) {
+      progressBar.getProgress(value);
+    });
+                
+    this.load.on('fileprogress', function (file) {
+      progressBar.getFileProgress(file);
+    });
+     
+    this.load.on('complete', function () {
+      progressBar.bar.destroy();
+      progressBar.box.destroy();
+      progressBar.loadingText.destroy();
+      progressBar.percentText.destroy();
+      progressBar.assetText.destroy();
+    });
+
+    this.progressBar = progressBar;
   }
 
   create () {
