@@ -68,7 +68,7 @@ export default class StartScene extends Phaser.Scene {
     this.girlRect.setInteractive();
 
     this.boyRect = this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
-    this.cuteBoy = this.add.sprite(600, 360, 'cuteBoy').setScale(0.4);
+    this.cuteBoy = this.add.sprite(580, 370, 'cuteBoy').setScale(0.4);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
     this.boyRect.setInteractive();
   }
@@ -82,14 +82,14 @@ export default class StartScene extends Phaser.Scene {
 
     this.girlRect.on('pointerdown', () => {
       this.player = this.cuteGirl;
-      this.scene.stop('StarScene')
-      this.scene.start('GameScene', { player: this.player, gender: 'girl' })
+      this.scene.stop('StarScene');
+      this.scene.start('GameScene', { player: this.player, gender: 'girl' });
     })
 
     this.boyRect.on('pointerdown', () => {
       this.player = this.cuteBoy;
-      this.scene.stop('StarScene')
-      this.scene.start('GameScene', { player: this.player, gender: 'boy' })
+      this.scene.stop('StarScene');
+      this.scene.start('GameScene', { player: this.player, gender: 'boy' });
     })
   }
 

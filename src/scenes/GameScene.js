@@ -126,9 +126,10 @@ export default class GameScene extends Phaser.Scene {
   }
 
   createFullScreenBtn () {
-    const fullscreenBtn = this.add.image(800-16, 16, 'girlIdle1', 0).setScale(0.1).setOrigin(1, 0).setInteractive();
+    const fullscreenBtn = this.add.image(800-60, 20, 'girlIdle1', 0).setScale(0.09).setOrigin(1, 0).setInteractive();
+    const mainMenuBtn = this.add.image(810, 11, 'boyIdle1', 0).setScale(0.1).setOrigin(1, 0).setInteractive();
 
-    fullscreenBtn.on('pointerup', function () {
+    fullscreenBtn.on('pointerup', () => {
       if (this.scale.isFullscreen)
       {
         fullscreenBtn.setFrame(0);
@@ -141,9 +142,14 @@ export default class GameScene extends Phaser.Scene {
       }
     }, this);
 
+    mainMenuBtn.on('pointerup', () => {
+      this.scene.stop('GameScene');
+      this.scene.start('StartScene');
+    });
+
     const FKey = this.input.keyboard.addKey('F');
 
-    FKey.on('down', function () {
+    FKey.on('down', () => {
       if (this.scale.isFullscreen)
       {
         fullscreenBtn.setFrame(0);
