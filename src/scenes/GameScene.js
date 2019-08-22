@@ -142,7 +142,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }, this);
 
-    mainMenuBtn.on('pointerup', () => {
+    mainMenuBtn.on('pointerdown', () => {
       this.scene.stop('GameScene');
       this.scene.start('StartScene');
     });
