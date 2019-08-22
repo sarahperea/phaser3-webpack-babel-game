@@ -15,7 +15,7 @@ export default class StartScene extends Phaser.Scene {
     this.boyHovered = false;
 
     this.player = null;
-    this.playerSprites = {
+/*    this.playerSprites = {
       girl: {
         Idle: 16,
         Jump: 10,
@@ -29,6 +29,18 @@ export default class StartScene extends Phaser.Scene {
         Dead: 15
       }
     };
+*/  
+    this.playerSprites = {
+      'girl/Idle' : 16,
+      'girl/Jump' : 10,
+      'girl/Run'  : 20,
+      'girl/Dead' : 30,
+      'boy/Idle'  : 15,
+      'boy/Jump'  : 10,
+      'boy/Run'   : 15,
+      'boy/Dead'  : 15
+    };
+
     this.progressBar = new ProgressBar(this);
   }
 
@@ -36,14 +48,16 @@ export default class StartScene extends Phaser.Scene {
 
     this.load.path = '../../assets/';
 
-    let sprites = this.playerSprites;
-    for (let [key1, value1] of Object.entries(sprites)) {
-      for (let [key, value] of Object.entries(sprites[key1])) {
-        for (let i=1; i<=value; i++) {
-          this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
-        }
-      }      
-    }
+    // let sprites = this.playerSprites;
+    // for (let [key1, value1] of Object.entries(sprites)) {
+    //   for (let [key, value] of Object.entries(sprites[key1])) {
+    //     for (let i=1; i<=value; i++) {
+    //       this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
+    //     }
+    //   }      
+    // }
+
+    this.load.multiatlas('assets', 'assets.json', 'assets');
 
     this.load.on('progress', function (value) {
       this.progressBar.getProgress(value);
@@ -71,21 +85,19 @@ export default class StartScene extends Phaser.Scene {
   }
 
   update () {
-    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
-    else this.cuteGirl.anims.play('girlJump', true);
+    this.cuteGirl.anims.play(this.girlHovered ?  'girlJump' : 'girlIdle', true);
 
-    if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
-    else this.cuteBoy.anims.play('boyJump', true);
+    this.cuteBoy.anims.play(this.boyHovered ?  'boyJump' : 'boyIdle', true);
   }
 
   createPlayerBoxes () {
     this.girlRect = this.add.rectangle(280, 360, 200, 300, 0x000000, 1);
-    this.cuteGirl = this.add.sprite(280, 370, 'cuteGirl').setScale(0.4);
+    this.cuteGirl = this.add.sprite(280, 370, 'assets', 'girl/Idle (1).png').setScale(0.4);
     this.add.text(260, 520, 'sarah', { fontSize: '18px', fill: '#ffffff'});
     this.girlRect.setInteractive();
 
     this.boyRect = this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
-    this.cuteBoy = this.add.sprite(580, 370, 'cuteBoy').setScale(0.4);
+    this.cuteBoy = this.add.sprite(580, 370, 'assets', 'boy/Idle (1).png').setScale(0.4);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
     this.boyRect.setInteractive();
   }
@@ -111,7 +123,7 @@ export default class StartScene extends Phaser.Scene {
   }
 
   createPlayerAnimations () {
-    let sprites = this.playerSprites;
+    /*let sprites = this.playerSprites;
     for (let [key1, value1] of Object.entries(sprites)) {
       for (let [key, value] of Object.entries(sprites[key1])) {
         for (let i=1; i<=value; i++) {
@@ -123,16 +135,29 @@ export default class StartScene extends Phaser.Scene {
           });
         }
       }      
+    }*/
+    for (let [key, value] of Object.entries(this.playerSprites)) {
+      this.anims.create({
+        key: `${key.replace('/', '')}`,
+        frames: this.anims.generateFrameNames('assets', {
+          start: 1,
+          end: value,
+          prefix: `${key} (`,
+          suffix: ').png'
+        }),
+        frameRate: 20,
+        repeat: key.includes('Dead') ? 0 : -1 
+      })
     }
   }
 
-  getFrames (gender, action) {
+/*  getFrames (gender, action) {
     let frames = [];
     for (let i=1; i<=this.playerSprites[gender][action]; i++) {
       frames.push({ key: `${gender}${action}${i}` });
     }
     return frames;
-  }
+  }*/
 
   destroyProgressBar () {
     this.progressBar.bar.destroy();
