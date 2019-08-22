@@ -178,7 +178,7 @@ export default class GameScene extends Phaser.Scene {
 
   setupPlayer () {
     this.player = this.physics.add.sprite(100, 450, 'girlRun1');
-    this.player.setScale(0.17);
+    this.player.setScale(0.10);
 
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
