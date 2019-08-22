@@ -1,0 +1,5083 @@
+{
+	"textures": [
+		{
+			"image": "assets-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2044,
+				"h": 1930
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "BG.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1800,
+						"h": 893
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1800,
+						"h": 893
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 1800,
+						"h": 893
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 128
+					},
+					"frame": {
+						"x": 1803,
+						"y": 1,
+						"w": 128,
+						"h": 128
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "star.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 22
+					},
+					"frame": {
+						"x": 1933,
+						"y": 1,
+						"w": 24,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "bomb.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 14
+					},
+					"frame": {
+						"x": 1959,
+						"y": 1,
+						"w": 14,
+						"h": 14
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 93
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 93
+					},
+					"frame": {
+						"x": 1803,
+						"y": 131,
+						"w": 128,
+						"h": 93
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 93
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 93
+					},
+					"frame": {
+						"x": 1803,
+						"y": 226,
+						"w": 128,
+						"h": 93
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 93
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 93
+					},
+					"frame": {
+						"x": 1803,
+						"y": 321,
+						"w": 128,
+						"h": 93
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 24,
+						"y": 13,
+						"w": 284,
+						"h": 489
+					},
+					"frame": {
+						"x": 1,
+						"y": 896,
+						"w": 284,
+						"h": 489
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 21,
+						"w": 287,
+						"h": 487
+					},
+					"frame": {
+						"x": 1,
+						"y": 1387,
+						"w": 287,
+						"h": 487
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 21,
+						"w": 287,
+						"h": 485
+					},
+					"frame": {
+						"x": 287,
+						"y": 896,
+						"w": 287,
+						"h": 485
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "dude.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 288,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 284,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 1876,
+						"w": 284,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 22,
+						"w": 287,
+						"h": 484
+					},
+					"frame": {
+						"x": 290,
+						"y": 1383,
+						"w": 287,
+						"h": 484
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 21,
+						"w": 287,
+						"h": 484
+					},
+					"frame": {
+						"x": 576,
+						"y": 896,
+						"w": 287,
+						"h": 484
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 21,
+						"w": 287,
+						"h": 483
+					},
+					"frame": {
+						"x": 579,
+						"y": 1382,
+						"w": 287,
+						"h": 483
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 21,
+						"w": 286,
+						"h": 483
+					},
+					"frame": {
+						"x": 865,
+						"y": 896,
+						"w": 286,
+						"h": 483
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 23,
+						"w": 288,
+						"h": 482
+					},
+					"frame": {
+						"x": 868,
+						"y": 1381,
+						"w": 288,
+						"h": 482
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 22,
+						"w": 287,
+						"h": 481
+					},
+					"frame": {
+						"x": 1153,
+						"y": 896,
+						"w": 287,
+						"h": 481
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 21,
+						"w": 286,
+						"h": 481
+					},
+					"frame": {
+						"x": 1158,
+						"y": 1379,
+						"w": 286,
+						"h": 481
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 33,
+						"w": 276,
+						"h": 468
+					},
+					"frame": {
+						"x": 1442,
+						"y": 896,
+						"w": 276,
+						"h": 468
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 0,
+						"w": 323,
+						"h": 439
+					},
+					"frame": {
+						"x": 1720,
+						"y": 896,
+						"w": 323,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 116,
+						"y": 235,
+						"w": 486,
+						"h": 281
+					},
+					"frame": {
+						"x": 1446,
+						"y": 1366,
+						"w": 486,
+						"h": 281
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 116,
+						"y": 230,
+						"w": 481,
+						"h": 280
+					},
+					"frame": {
+						"x": 1446,
+						"y": 1649,
+						"w": 481,
+						"h": 280
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2048,
+				"h": 2048
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "boy/Dead (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 123,
+						"y": 241,
+						"w": 481,
+						"h": 280
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 481,
+						"h": 280
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 124,
+						"y": 241,
+						"w": 480,
+						"h": 280
+					},
+					"frame": {
+						"x": 484,
+						"y": 1,
+						"w": 480,
+						"h": 280
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 124,
+						"y": 241,
+						"w": 480,
+						"h": 280
+					},
+					"frame": {
+						"x": 484,
+						"y": 1,
+						"w": 480,
+						"h": 280
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 123,
+						"y": 224,
+						"w": 457,
+						"h": 287
+					},
+					"frame": {
+						"x": 966,
+						"y": 1,
+						"w": 457,
+						"h": 287
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 109,
+						"y": 199,
+						"w": 448,
+						"h": 306
+					},
+					"frame": {
+						"x": 1425,
+						"y": 1,
+						"w": 448,
+						"h": 306
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 96,
+						"y": 171,
+						"w": 434,
+						"h": 333
+					},
+					"frame": {
+						"x": 1,
+						"y": 283,
+						"w": 434,
+						"h": 333
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (28).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 170,
+						"y": 206,
+						"w": 426,
+						"h": 288
+					},
+					"frame": {
+						"x": 437,
+						"y": 283,
+						"w": 426,
+						"h": 288
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (29).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 170,
+						"y": 215,
+						"w": 426,
+						"h": 282
+					},
+					"frame": {
+						"x": 865,
+						"y": 290,
+						"w": 426,
+						"h": 282
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (30).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 170,
+						"y": 215,
+						"w": 426,
+						"h": 282
+					},
+					"frame": {
+						"x": 865,
+						"y": 290,
+						"w": 426,
+						"h": 282
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (27).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 171,
+						"y": 196,
+						"w": 425,
+						"h": 295
+					},
+					"frame": {
+						"x": 437,
+						"y": 573,
+						"w": 425,
+						"h": 295
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (26).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 172,
+						"y": 186,
+						"w": 424,
+						"h": 302
+					},
+					"frame": {
+						"x": 1,
+						"y": 618,
+						"w": 424,
+						"h": 302
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (25).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 174,
+						"y": 177,
+						"w": 421,
+						"h": 308
+					},
+					"frame": {
+						"x": 1293,
+						"y": 309,
+						"w": 421,
+						"h": 308
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 15,
+						"w": 331,
+						"h": 441
+					},
+					"frame": {
+						"x": 1716,
+						"y": 309,
+						"w": 331,
+						"h": 441
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (24).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 178,
+						"y": 167,
+						"w": 417,
+						"h": 317
+					},
+					"frame": {
+						"x": 864,
+						"y": 574,
+						"w": 417,
+						"h": 317
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 140,
+						"w": 416,
+						"h": 361
+					},
+					"frame": {
+						"x": 1283,
+						"y": 619,
+						"w": 416,
+						"h": 361
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (23).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 45,
+						"y": 11,
+						"w": 346,
+						"h": 437
+					},
+					"frame": {
+						"x": 1701,
+						"y": 752,
+						"w": 346,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (23).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 182,
+						"y": 158,
+						"w": 413,
+						"h": 324
+					},
+					"frame": {
+						"x": 427,
+						"y": 870,
+						"w": 413,
+						"h": 324
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 76,
+						"y": 120,
+						"w": 407,
+						"h": 378
+					},
+					"frame": {
+						"x": 1,
+						"y": 922,
+						"w": 407,
+						"h": 378
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (22).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 174,
+						"y": 160,
+						"w": 400,
+						"h": 308
+					},
+					"frame": {
+						"x": 842,
+						"y": 893,
+						"w": 400,
+						"h": 308
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 102,
+						"w": 388,
+						"h": 403
+					},
+					"frame": {
+						"x": 410,
+						"y": 1196,
+						"w": 388,
+						"h": 403
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 25,
+						"w": 316,
+						"h": 445
+					},
+					"frame": {
+						"x": 1,
+						"y": 1601,
+						"w": 316,
+						"h": 445
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 50,
+						"y": 6,
+						"w": 317,
+						"h": 444
+					},
+					"frame": {
+						"x": 319,
+						"y": 1601,
+						"w": 317,
+						"h": 444
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 4,
+						"w": 316,
+						"h": 444
+					},
+					"frame": {
+						"x": 638,
+						"y": 1601,
+						"w": 316,
+						"h": 444
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 59,
+						"w": 359,
+						"h": 394
+					},
+					"frame": {
+						"x": 800,
+						"y": 1203,
+						"w": 359,
+						"h": 394
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 32,
+						"w": 310,
+						"h": 447
+					},
+					"frame": {
+						"x": 956,
+						"y": 1599,
+						"w": 310,
+						"h": 447
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 59,
+						"w": 349,
+						"h": 394
+					},
+					"frame": {
+						"x": 1161,
+						"y": 1203,
+						"w": 349,
+						"h": 394
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 7,
+						"w": 316,
+						"h": 444
+					},
+					"frame": {
+						"x": 1268,
+						"y": 1599,
+						"w": 316,
+						"h": 444
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 71,
+						"y": 59,
+						"w": 335,
+						"h": 394
+					},
+					"frame": {
+						"x": 1512,
+						"y": 1191,
+						"w": 335,
+						"h": 394
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 48,
+						"y": 28,
+						"w": 305,
+						"h": 460
+					},
+					"frame": {
+						"x": 1586,
+						"y": 1587,
+						"w": 305,
+						"h": 460
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2021,
+				"h": 1886
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "boy/Idle (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 24,
+						"w": 286,
+						"h": 479
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 286,
+						"h": 479
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 25,
+						"w": 286,
+						"h": 478
+					},
+					"frame": {
+						"x": 1,
+						"y": 482,
+						"w": 286,
+						"h": 478
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 285,
+						"h": 478
+					},
+					"frame": {
+						"x": 1,
+						"y": 962,
+						"w": 285,
+						"h": 478
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 3,
+						"w": 315,
+						"h": 443
+					},
+					"frame": {
+						"x": 1,
+						"y": 1442,
+						"w": 315,
+						"h": 443
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 285,
+						"h": 478
+					},
+					"frame": {
+						"x": 288,
+						"y": 962,
+						"w": 285,
+						"h": 478
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 9,
+						"w": 316,
+						"h": 438
+					},
+					"frame": {
+						"x": 318,
+						"y": 1442,
+						"w": 316,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 288,
+						"h": 477
+					},
+					"frame": {
+						"x": 289,
+						"y": 1,
+						"w": 288,
+						"h": 477
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 22,
+						"w": 287,
+						"h": 477
+					},
+					"frame": {
+						"x": 289,
+						"y": 480,
+						"w": 287,
+						"h": 477
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 26,
+						"w": 287,
+						"h": 477
+					},
+					"frame": {
+						"x": 575,
+						"y": 959,
+						"w": 287,
+						"h": 477
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 26,
+						"w": 286,
+						"h": 477
+					},
+					"frame": {
+						"x": 578,
+						"y": 480,
+						"w": 286,
+						"h": 477
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 26,
+						"w": 284,
+						"h": 477
+					},
+					"frame": {
+						"x": 579,
+						"y": 1,
+						"w": 284,
+						"h": 477
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 25,
+						"w": 287,
+						"h": 476
+					},
+					"frame": {
+						"x": 865,
+						"y": 1,
+						"w": 287,
+						"h": 476
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 7,
+						"w": 314,
+						"h": 444
+					},
+					"frame": {
+						"x": 636,
+						"y": 1438,
+						"w": 314,
+						"h": 444
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 27,
+						"w": 284,
+						"h": 476
+					},
+					"frame": {
+						"x": 864,
+						"y": 959,
+						"w": 284,
+						"h": 476
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 29,
+						"w": 287,
+						"h": 474
+					},
+					"frame": {
+						"x": 866,
+						"y": 479,
+						"w": 287,
+						"h": 474
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 29,
+						"w": 285,
+						"h": 474
+					},
+					"frame": {
+						"x": 1154,
+						"y": 1,
+						"w": 285,
+						"h": 474
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (17).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 7,
+						"w": 314,
+						"h": 438
+					},
+					"frame": {
+						"x": 952,
+						"y": 1437,
+						"w": 314,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 31,
+						"w": 288,
+						"h": 473
+					},
+					"frame": {
+						"x": 1150,
+						"y": 955,
+						"w": 288,
+						"h": 473
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 79,
+						"y": 48,
+						"w": 285,
+						"h": 455
+					},
+					"frame": {
+						"x": 1268,
+						"y": 1430,
+						"w": 285,
+						"h": 455
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 26,
+						"w": 287,
+						"h": 473
+					},
+					"frame": {
+						"x": 1155,
+						"y": 477,
+						"w": 287,
+						"h": 473
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 30,
+						"w": 286,
+						"h": 473
+					},
+					"frame": {
+						"x": 1441,
+						"y": 1,
+						"w": 286,
+						"h": 473
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 32,
+						"w": 287,
+						"h": 471
+					},
+					"frame": {
+						"x": 1440,
+						"y": 952,
+						"w": 287,
+						"h": 471
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 32,
+						"w": 286,
+						"h": 471
+					},
+					"frame": {
+						"x": 1444,
+						"y": 476,
+						"w": 286,
+						"h": 471
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 30,
+						"w": 288,
+						"h": 470
+					},
+					"frame": {
+						"x": 1729,
+						"y": 1,
+						"w": 288,
+						"h": 470
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 32,
+						"w": 288,
+						"h": 470
+					},
+					"frame": {
+						"x": 1732,
+						"y": 473,
+						"w": 288,
+						"h": 470
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 35,
+						"w": 288,
+						"h": 468
+					},
+					"frame": {
+						"x": 1732,
+						"y": 945,
+						"w": 288,
+						"h": 468
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Idle (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 35,
+						"w": 288,
+						"h": 468
+					},
+					"frame": {
+						"x": 1729,
+						"y": 1415,
+						"w": 288,
+						"h": 468
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-3.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1892,
+				"h": 1886
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "boy/Idle (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 33,
+						"w": 287,
+						"h": 470
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 287,
+						"h": 470
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 33,
+						"w": 287,
+						"h": 470
+					},
+					"frame": {
+						"x": 1,
+						"y": 473,
+						"w": 287,
+						"h": 470
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 29,
+						"w": 293,
+						"h": 469
+					},
+					"frame": {
+						"x": 1,
+						"y": 945,
+						"w": 293,
+						"h": 469
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Walk (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 31,
+						"w": 287,
+						"h": 469
+					},
+					"frame": {
+						"x": 1,
+						"y": 1416,
+						"w": 287,
+						"h": 469
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 29,
+						"w": 293,
+						"h": 467
+					},
+					"frame": {
+						"x": 290,
+						"y": 1416,
+						"w": 293,
+						"h": 467
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 66,
+						"y": 32,
+						"w": 289,
+						"h": 467
+					},
+					"frame": {
+						"x": 290,
+						"y": 1,
+						"w": 289,
+						"h": 467
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 58,
+						"y": 33,
+						"w": 296,
+						"h": 465
+					},
+					"frame": {
+						"x": 290,
+						"y": 470,
+						"w": 296,
+						"h": 465
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 79,
+						"y": 44,
+						"w": 287,
+						"h": 465
+					},
+					"frame": {
+						"x": 581,
+						"y": 1,
+						"w": 287,
+						"h": 465
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 20,
+						"w": 286,
+						"h": 461
+					},
+					"frame": {
+						"x": 296,
+						"y": 937,
+						"w": 286,
+						"h": 461
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 23,
+						"w": 319,
+						"h": 458
+					},
+					"frame": {
+						"x": 584,
+						"y": 937,
+						"w": 319,
+						"h": 458
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 34,
+						"w": 300,
+						"h": 458
+					},
+					"frame": {
+						"x": 588,
+						"y": 468,
+						"w": 300,
+						"h": 458
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 37,
+						"w": 310,
+						"h": 456
+					},
+					"frame": {
+						"x": 870,
+						"y": 1,
+						"w": 310,
+						"h": 456
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 45,
+						"y": 26,
+						"w": 308,
+						"h": 456
+					},
+					"frame": {
+						"x": 890,
+						"y": 459,
+						"w": 308,
+						"h": 456
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Run (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 31,
+						"w": 324,
+						"h": 454
+					},
+					"frame": {
+						"x": 1182,
+						"y": 1,
+						"w": 324,
+						"h": 454
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (19).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 133,
+						"y": 108,
+						"w": 380,
+						"h": 364
+					},
+					"frame": {
+						"x": 1508,
+						"y": 1,
+						"w": 380,
+						"h": 364
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (18).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 111,
+						"y": 88,
+						"w": 379,
+						"h": 381
+					},
+					"frame": {
+						"x": 1508,
+						"y": 367,
+						"w": 379,
+						"h": 381
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 9,
+						"w": 305,
+						"h": 442
+					},
+					"frame": {
+						"x": 1200,
+						"y": 457,
+						"w": 305,
+						"h": 442
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (20).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 158,
+						"y": 134,
+						"w": 376,
+						"h": 339
+					},
+					"frame": {
+						"x": 1507,
+						"y": 750,
+						"w": 376,
+						"h": 339
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 17,
+						"w": 304,
+						"h": 436
+					},
+					"frame": {
+						"x": 1200,
+						"y": 901,
+						"w": 304,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (21).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 166,
+						"y": 160,
+						"w": 385,
+						"h": 311
+					},
+					"frame": {
+						"x": 1506,
+						"y": 1091,
+						"w": 385,
+						"h": 311
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 15,
+						"w": 293,
+						"h": 438
+					},
+					"frame": {
+						"x": 905,
+						"y": 917,
+						"w": 293,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 17,
+						"w": 304,
+						"h": 436
+					},
+					"frame": {
+						"x": 1200,
+						"y": 1339,
+						"w": 304,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 5,
+						"w": 293,
+						"h": 426
+					},
+					"frame": {
+						"x": 905,
+						"y": 1357,
+						"w": 293,
+						"h": 426
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 50,
+						"y": 43,
+						"w": 318,
+						"h": 429
+					},
+					"frame": {
+						"x": 585,
+						"y": 1397,
+						"w": 318,
+						"h": 429
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (17).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 91,
+						"y": 73,
+						"w": 373,
+						"h": 389
+					},
+					"frame": {
+						"x": 1506,
+						"y": 1404,
+						"w": 373,
+						"h": 389
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-4.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1961,
+				"h": 2048
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "boy/Run (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 29,
+						"y": 27,
+						"w": 322,
+						"h": 454
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 322,
+						"h": 454
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 10,
+						"w": 309,
+						"h": 444
+					},
+					"frame": {
+						"x": 1,
+						"y": 457,
+						"w": 309,
+						"h": 444
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 9,
+						"w": 309,
+						"h": 443
+					},
+					"frame": {
+						"x": 1,
+						"y": 903,
+						"w": 309,
+						"h": 443
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 56,
+						"y": 9,
+						"w": 319,
+						"h": 442
+					},
+					"frame": {
+						"x": 1,
+						"y": 1348,
+						"w": 319,
+						"h": 442
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 8,
+						"w": 313,
+						"h": 442
+					},
+					"frame": {
+						"x": 312,
+						"y": 457,
+						"w": 313,
+						"h": 442
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 8,
+						"w": 311,
+						"h": 442
+					},
+					"frame": {
+						"x": 312,
+						"y": 901,
+						"w": 311,
+						"h": 442
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 7,
+						"w": 319,
+						"h": 441
+					},
+					"frame": {
+						"x": 325,
+						"y": 1,
+						"w": 319,
+						"h": 441
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (16).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 7,
+						"w": 313,
+						"h": 441
+					},
+					"frame": {
+						"x": 322,
+						"y": 1345,
+						"w": 313,
+						"h": 441
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 8,
+						"w": 312,
+						"h": 441
+					},
+					"frame": {
+						"x": 625,
+						"y": 901,
+						"w": 312,
+						"h": 441
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 56,
+						"y": 8,
+						"w": 311,
+						"h": 441
+					},
+					"frame": {
+						"x": 627,
+						"y": 444,
+						"w": 311,
+						"h": 441
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 7,
+						"w": 300,
+						"h": 441
+					},
+					"frame": {
+						"x": 646,
+						"y": 1,
+						"w": 300,
+						"h": 441
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (19).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 11,
+						"w": 327,
+						"h": 440
+					},
+					"frame": {
+						"x": 637,
+						"y": 1344,
+						"w": 327,
+						"h": 440
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 48,
+						"y": 10,
+						"w": 321,
+						"h": 440
+					},
+					"frame": {
+						"x": 939,
+						"y": 887,
+						"w": 321,
+						"h": 440
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (18).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 9,
+						"w": 320,
+						"h": 440
+					},
+					"frame": {
+						"x": 940,
+						"y": 444,
+						"w": 320,
+						"h": 440
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 7,
+						"w": 308,
+						"h": 440
+					},
+					"frame": {
+						"x": 948,
+						"y": 1,
+						"w": 308,
+						"h": 440
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 76,
+						"y": 13,
+						"w": 287,
+						"h": 440
+					},
+					"frame": {
+						"x": 1258,
+						"y": 1,
+						"w": 287,
+						"h": 440
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 87,
+						"w": 370,
+						"h": 423
+					},
+					"frame": {
+						"x": 1547,
+						"y": 1,
+						"w": 370,
+						"h": 423
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 60,
+						"w": 368,
+						"h": 393
+					},
+					"frame": {
+						"x": 1547,
+						"y": 426,
+						"w": 368,
+						"h": 393
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 3,
+						"w": 339,
+						"h": 439
+					},
+					"frame": {
+						"x": 966,
+						"y": 1329,
+						"w": 339,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 26,
+						"y": 2,
+						"w": 336,
+						"h": 439
+					},
+					"frame": {
+						"x": 1262,
+						"y": 821,
+						"w": 336,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (16).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 64,
+						"w": 360,
+						"h": 391
+					},
+					"frame": {
+						"x": 1600,
+						"y": 821,
+						"w": 360,
+						"h": 391
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 43,
+						"w": 358,
+						"h": 412
+					},
+					"frame": {
+						"x": 1600,
+						"y": 1214,
+						"w": 358,
+						"h": 412
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 74,
+						"y": 14,
+						"w": 291,
+						"h": 439
+					},
+					"frame": {
+						"x": 1307,
+						"y": 1262,
+						"w": 291,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (29).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 83,
+						"y": 28,
+						"w": 320,
+						"h": 419
+					},
+					"frame": {
+						"x": 1600,
+						"y": 1628,
+						"w": 320,
+						"h": 419
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-5.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2008,
+				"h": 1764
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "girl/Walk (20).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 13,
+						"w": 333,
+						"h": 439
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 333,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 1,
+						"w": 330,
+						"h": 439
+					},
+					"frame": {
+						"x": 1,
+						"y": 442,
+						"w": 330,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 5,
+						"w": 296,
+						"h": 439
+					},
+					"frame": {
+						"x": 1,
+						"y": 883,
+						"w": 296,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 74,
+						"y": 14,
+						"w": 291,
+						"h": 439
+					},
+					"frame": {
+						"x": 1,
+						"y": 1324,
+						"w": 291,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (16).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 14,
+						"w": 289,
+						"h": 439
+					},
+					"frame": {
+						"x": 294,
+						"y": 1324,
+						"w": 289,
+						"h": 439
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 5,
+						"w": 345,
+						"h": 438
+					},
+					"frame": {
+						"x": 299,
+						"y": 883,
+						"w": 345,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 4,
+						"w": 342,
+						"h": 438
+					},
+					"frame": {
+						"x": 333,
+						"y": 442,
+						"w": 342,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 29,
+						"y": 2,
+						"w": 333,
+						"h": 438
+					},
+					"frame": {
+						"x": 336,
+						"y": 1,
+						"w": 333,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 13,
+						"w": 333,
+						"h": 438
+					},
+					"frame": {
+						"x": 671,
+						"y": 1,
+						"w": 333,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 1,
+						"w": 327,
+						"h": 438
+					},
+					"frame": {
+						"x": 585,
+						"y": 1323,
+						"w": 327,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 59,
+						"y": 6,
+						"w": 300,
+						"h": 438
+					},
+					"frame": {
+						"x": 646,
+						"y": 882,
+						"w": 300,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 15,
+						"w": 296,
+						"h": 438
+					},
+					"frame": {
+						"x": 677,
+						"y": 441,
+						"w": 296,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 15,
+						"w": 295,
+						"h": 438
+					},
+					"frame": {
+						"x": 914,
+						"y": 1322,
+						"w": 295,
+						"h": 438
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 6,
+						"w": 348,
+						"h": 437
+					},
+					"frame": {
+						"x": 948,
+						"y": 881,
+						"w": 348,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (24).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 12,
+						"w": 345,
+						"h": 437
+					},
+					"frame": {
+						"x": 975,
+						"y": 441,
+						"w": 345,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 15,
+						"w": 339,
+						"h": 437
+					},
+					"frame": {
+						"x": 1006,
+						"y": 1,
+						"w": 339,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 43,
+						"y": 13,
+						"w": 331,
+						"h": 437
+					},
+					"frame": {
+						"x": 1211,
+						"y": 1320,
+						"w": 331,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (16).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 6,
+						"w": 321,
+						"h": 437
+					},
+					"frame": {
+						"x": 1298,
+						"y": 880,
+						"w": 321,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 10,
+						"w": 313,
+						"h": 437
+					},
+					"frame": {
+						"x": 1322,
+						"y": 440,
+						"w": 313,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 8,
+						"w": 310,
+						"h": 437
+					},
+					"frame": {
+						"x": 1347,
+						"y": 1,
+						"w": 310,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (22).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 10,
+						"w": 348,
+						"h": 436
+					},
+					"frame": {
+						"x": 1659,
+						"y": 1,
+						"w": 348,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (21).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 11,
+						"w": 349,
+						"h": 433
+					},
+					"frame": {
+						"x": 1544,
+						"y": 1319,
+						"w": 349,
+						"h": 433
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 74,
+						"y": 84,
+						"w": 357,
+						"h": 429
+					},
+					"frame": {
+						"x": 1621,
+						"y": 879,
+						"w": 357,
+						"h": 429
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 28,
+						"y": 19,
+						"w": 355,
+						"h": 427
+					},
+					"frame": {
+						"x": 1637,
+						"y": 440,
+						"w": 355,
+						"h": 427
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-6.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1945,
+				"h": 1748
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "girl/Jump (14).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 6,
+						"w": 347,
+						"h": 436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 347,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (18).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 28,
+						"y": 8,
+						"w": 347,
+						"h": 436
+					},
+					"frame": {
+						"x": 1,
+						"y": 439,
+						"w": 347,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (19).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 9,
+						"w": 347,
+						"h": 436
+					},
+					"frame": {
+						"x": 350,
+						"y": 1,
+						"w": 347,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (20).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 10,
+						"w": 348,
+						"h": 435
+					},
+					"frame": {
+						"x": 699,
+						"y": 1,
+						"w": 348,
+						"h": 435
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 7,
+						"w": 346,
+						"h": 434
+					},
+					"frame": {
+						"x": 1,
+						"y": 877,
+						"w": 346,
+						"h": 434
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (17).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 8,
+						"w": 346,
+						"h": 434
+					},
+					"frame": {
+						"x": 1,
+						"y": 1313,
+						"w": 346,
+						"h": 434
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (25).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 14,
+						"w": 343,
+						"h": 436
+					},
+					"frame": {
+						"x": 350,
+						"y": 439,
+						"w": 343,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 16,
+						"w": 344,
+						"h": 434
+					},
+					"frame": {
+						"x": 1049,
+						"y": 1,
+						"w": 344,
+						"h": 434
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (16).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 7,
+						"w": 345,
+						"h": 433
+					},
+					"frame": {
+						"x": 1395,
+						"y": 1,
+						"w": 345,
+						"h": 433
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (26).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 58,
+						"y": 16,
+						"w": 342,
+						"h": 435
+					},
+					"frame": {
+						"x": 349,
+						"y": 877,
+						"w": 342,
+						"h": 435
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 28,
+						"w": 345,
+						"h": 430
+					},
+					"frame": {
+						"x": 349,
+						"y": 1314,
+						"w": 345,
+						"h": 430
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 71,
+						"y": 16,
+						"w": 298,
+						"h": 437
+					},
+					"frame": {
+						"x": 695,
+						"y": 439,
+						"w": 298,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 6,
+						"w": 301,
+						"h": 431
+					},
+					"frame": {
+						"x": 693,
+						"y": 878,
+						"w": 301,
+						"h": 431
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (3).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 11,
+						"w": 323,
+						"h": 436
+					},
+					"frame": {
+						"x": 696,
+						"y": 1311,
+						"w": 323,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 16,
+						"w": 296,
+						"h": 437
+					},
+					"frame": {
+						"x": 995,
+						"y": 438,
+						"w": 296,
+						"h": 437
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 6,
+						"w": 298,
+						"h": 432
+					},
+					"frame": {
+						"x": 996,
+						"y": 877,
+						"w": 298,
+						"h": 432
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 75,
+						"y": 7,
+						"w": 308,
+						"h": 436
+					},
+					"frame": {
+						"x": 1021,
+						"y": 1311,
+						"w": 308,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 17,
+						"w": 302,
+						"h": 436
+					},
+					"frame": {
+						"x": 1293,
+						"y": 437,
+						"w": 302,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (20).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 29,
+						"y": 16,
+						"w": 347,
+						"h": 427
+					},
+					"frame": {
+						"x": 1597,
+						"y": 436,
+						"w": 347,
+						"h": 427
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (15).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 61,
+						"y": 60,
+						"w": 344,
+						"h": 393
+					},
+					"frame": {
+						"x": 1296,
+						"y": 875,
+						"w": 344,
+						"h": 393
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 18,
+						"w": 307,
+						"h": 435
+					},
+					"frame": {
+						"x": 1331,
+						"y": 1270,
+						"w": 307,
+						"h": 435
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 17,
+						"w": 300,
+						"h": 436
+					},
+					"frame": {
+						"x": 1642,
+						"y": 865,
+						"w": 300,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Walk (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 64,
+						"y": 4,
+						"w": 292,
+						"h": 436
+					},
+					"frame": {
+						"x": 1640,
+						"y": 1303,
+						"w": 292,
+						"h": 436
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-7.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1970,
+				"h": 1700
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "girl/Jump (27).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 62,
+						"y": 19,
+						"w": 341,
+						"h": 433
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 341,
+						"h": 433
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (19).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 12,
+						"w": 339,
+						"h": 426
+					},
+					"frame": {
+						"x": 1,
+						"y": 436,
+						"w": 339,
+						"h": 426
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (28).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 23,
+						"w": 331,
+						"h": 429
+					},
+					"frame": {
+						"x": 344,
+						"y": 1,
+						"w": 331,
+						"h": 429
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (2).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 87,
+						"w": 336,
+						"h": 423
+					},
+					"frame": {
+						"x": 1,
+						"y": 864,
+						"w": 336,
+						"h": 423
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Dead (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 93,
+						"w": 320,
+						"h": 410
+					},
+					"frame": {
+						"x": 1,
+						"y": 1289,
+						"w": 320,
+						"h": 410
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (18).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 9,
+						"w": 332,
+						"h": 426
+					},
+					"frame": {
+						"x": 677,
+						"y": 1,
+						"w": 332,
+						"h": 426
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 15,
+						"w": 336,
+						"h": 420
+					},
+					"frame": {
+						"x": 1011,
+						"y": 1,
+						"w": 336,
+						"h": 420
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 12,
+						"w": 332,
+						"h": 421
+					},
+					"frame": {
+						"x": 1349,
+						"y": 1,
+						"w": 332,
+						"h": 421
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 4,
+						"w": 286,
+						"h": 424
+					},
+					"frame": {
+						"x": 1683,
+						"y": 1,
+						"w": 286,
+						"h": 424
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (4).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 65,
+						"y": 19,
+						"w": 311,
+						"h": 434
+					},
+					"frame": {
+						"x": 342,
+						"y": 436,
+						"w": 311,
+						"h": 434
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (1).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 61,
+						"y": 13,
+						"w": 322,
+						"h": 433
+					},
+					"frame": {
+						"x": 339,
+						"y": 872,
+						"w": 322,
+						"h": 433
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (9).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 94,
+						"y": 61,
+						"w": 326,
+						"h": 392
+					},
+					"frame": {
+						"x": 323,
+						"y": 1307,
+						"w": 326,
+						"h": 392
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (10).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 101,
+						"y": 61,
+						"w": 319,
+						"h": 392
+					},
+					"frame": {
+						"x": 651,
+						"y": 1307,
+						"w": 319,
+						"h": 392
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Idle (5).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 66,
+						"y": 19,
+						"w": 309,
+						"h": 434
+					},
+					"frame": {
+						"x": 655,
+						"y": 432,
+						"w": 309,
+						"h": 434
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Jump (30).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 19,
+						"w": 321,
+						"h": 430
+					},
+					"frame": {
+						"x": 663,
+						"y": 868,
+						"w": 321,
+						"h": 430
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Run (17).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 416,
+						"h": 454
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 7,
+						"w": 325,
+						"h": 428
+					},
+					"frame": {
+						"x": 966,
+						"y": 429,
+						"w": 325,
+						"h": 428
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 5,
+						"w": 322,
+						"h": 424
+					},
+					"frame": {
+						"x": 986,
+						"y": 859,
+						"w": 322,
+						"h": 424
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 12,
+						"w": 332,
+						"h": 421
+					},
+					"frame": {
+						"x": 1293,
+						"y": 424,
+						"w": 332,
+						"h": 421
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (7).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 9,
+						"w": 328,
+						"h": 422
+					},
+					"frame": {
+						"x": 1310,
+						"y": 847,
+						"w": 328,
+						"h": 422
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (13).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 82,
+						"y": 59,
+						"w": 329,
+						"h": 394
+					},
+					"frame": {
+						"x": 1640,
+						"y": 427,
+						"w": 329,
+						"h": 394
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 8,
+						"w": 326,
+						"h": 422
+					},
+					"frame": {
+						"x": 1640,
+						"y": 823,
+						"w": 326,
+						"h": 422
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (8).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 80,
+						"y": 60,
+						"w": 338,
+						"h": 393
+					},
+					"frame": {
+						"x": 972,
+						"y": 1300,
+						"w": 338,
+						"h": 393
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "boy/Jump (6).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 614,
+						"h": 564
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 6,
+						"w": 323,
+						"h": 422
+					},
+					"frame": {
+						"x": 1312,
+						"y": 1271,
+						"w": 323,
+						"h": 422
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "girl/Dead (12).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 95,
+						"y": 60,
+						"w": 321,
+						"h": 393
+					},
+					"frame": {
+						"x": 1637,
+						"y": 1271,
+						"w": 321,
+						"h": 393
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		},
+		{
+			"image": "assets-8.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 314,
+				"h": 394
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "girl/Dead (11).png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 601,
+						"h": 502
+					},
+					"spriteSourceSize": {
+						"x": 108,
+						"y": 61,
+						"w": 312,
+						"h": 392
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 312,
+						"h": 392
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:895c0c367a8adad604506ec77cecea5e:7bad550caefb6b2e9c4ec22013d55a5a:ae6d1c28007de7858a7ce08772fbe317$"
+	}
+}

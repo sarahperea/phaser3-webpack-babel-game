@@ -37,14 +37,16 @@ export default class StartScene extends Phaser.Scene {
 
     this.load.path = '../../assets/';
 
-    let sprites = this.playerSprites;
+/*    let sprites = this.playerSprites;
     for (let [key1, value1] of Object.entries(sprites)) {
       for (let [key, value] of Object.entries(sprites[key1])) {
         for (let i=1; i<=value; i++) {
           this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
         }
       }      
-    }
+    }*/
+
+    this.load.multiatlas('assets', 'assets.json', 'assets');
 
     this.load.on('progress', function (value) {
       progressBar.getProgress(value);
@@ -76,21 +78,22 @@ export default class StartScene extends Phaser.Scene {
   }
 
   update () {
-    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
+/*    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
     else this.cuteGirl.anims.play('girlJump', true);
 
     if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
-    else this.cuteBoy.anims.play('boyJump', true);
+    else this.cuteBoy.anims.play('boyJump', true);*/
+    this.cuteGirl.anims.play('walk', true);
   }
 
   createPlayerBoxes () {
     this.girlRect = this.add.rectangle(280, 360, 200, 300, 0x000000, 1);
-    this.cuteGirl = this.add.sprite(280, 370, 'cuteGirl').setScale(0.4);
+    this.cuteGirl = this.add.sprite(280, 370, 'assets', 'girl/Idle (1).png').setScale(0.4);
     this.add.text(260, 520, 'sarah', { fontSize: '18px', fill: '#ffffff'});
     this.girlRect.setInteractive();
 
     this.boyRect = this.add.rectangle(520, 360, 200, 300, 0x000000, 1);
-    this.cuteBoy = this.add.sprite(580, 370, 'cuteBoy').setScale(0.4);
+    this.cuteBoy = this.add.sprite(580, 370, 'assets', 'boy/Idle (1).png').setScale(0.4);
     this.add.text(490, 520, 'jerico', { fontSize: '18px', fill: '#ffffff'});
     this.boyRect.setInteractive();
   }
@@ -116,7 +119,7 @@ export default class StartScene extends Phaser.Scene {
   }
 
   createPlayerAnimations () {
-    let sprites = this.playerSprites;
+/*    let sprites = this.playerSprites;
     for (let [key1, value1] of Object.entries(sprites)) {
       for (let [key, value] of Object.entries(sprites[key1])) {
         for (let i=1; i<=value; i++) {
@@ -128,7 +131,13 @@ export default class StartScene extends Phaser.Scene {
           });
         }
       }      
-    }
+    }*/
+     var frameNames = this.anims.generateFrameNames('assets', {
+                         start: 1, end: 15, zeroPad: 0,
+                         prefix: 'girl/Run (', suffix: ').png'
+                     });
+     console.log(frameNames)
+    this.anims.create({ key: 'walk', frames: frameNames, frameRate: 20, repeat: -1 });
   }
 
   getFrames (gender, action) {
