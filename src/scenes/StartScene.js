@@ -142,12 +142,12 @@ export default class StartScene extends Phaser.Scene {
         }
       }      
     }*/
-    let sprites = this.playerSprites;
-    for (let [key, value] of Object.entries(sprites)) {
+    for (let [key, value] of Object.entries(this.playerSprites)) {
       this.anims.create({
         key: `${key.replace('/', '')}`,
         frames: this.anims.generateFrameNames('assets', {
-          start: 1, end: value,
+          start: 1,
+          end: value,
           prefix: `${key} (`,
           suffix: ').png'
         }),
