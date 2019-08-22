@@ -15,7 +15,7 @@ export default class StartScene extends Phaser.Scene {
     this.boyHovered = false;
 
     this.player = null;
-    /*this.playerSprites = {
+/*    this.playerSprites = {
       girl: {
         Idle: 16,
         Jump: 10,
@@ -28,8 +28,8 @@ export default class StartScene extends Phaser.Scene {
         Run: 15,
         Dead: 15
       }
-    };*/
-    this.playerSprites = {
+    };
+*/    this.playerSprites = {
       'girl/Idle' : 16,
       'girl/Jump' : 10,
       'girl/Run'  : 20,
@@ -48,14 +48,14 @@ export default class StartScene extends Phaser.Scene {
 
     this.load.path = '../../assets/';
 
-/*    let sprites = this.playerSprites;
-    for (let [key1, value1] of Object.entries(sprites)) {
-      for (let [key, value] of Object.entries(sprites[key1])) {
-        for (let i=1; i<=value; i++) {
-          this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
-        }
-      }      
-    }*/
+    // let sprites = this.playerSprites;
+    // for (let [key1, value1] of Object.entries(sprites)) {
+    //   for (let [key, value] of Object.entries(sprites[key1])) {
+    //     for (let i=1; i<=value; i++) {
+    //       this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
+    //     }
+    //   }      
+    // }
 
     this.load.multiatlas('assets', 'assets.json', 'assets');
 
@@ -127,7 +127,7 @@ export default class StartScene extends Phaser.Scene {
   }
 
   createPlayerAnimations () {
-/*    let sprites = this.playerSprites;
+    /*let sprites = this.playerSprites;
     for (let [key1, value1] of Object.entries(sprites)) {
       for (let [key, value] of Object.entries(sprites[key1])) {
         for (let i=1; i<=value; i++) {
