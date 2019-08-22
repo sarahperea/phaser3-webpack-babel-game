@@ -20,12 +20,14 @@ export default class GameScene extends Phaser.Scene {
 
     this.load.path = '../../assets/';
 
+    this.load.multiatlas('assets', 'assets.json', 'assets');
+
     this.load.audio('theme', [
         '../../assets/audio/jackinthebox.mp3'
     ],{
         instances: 2
     });
-    this.load.image('bg', 'BG.png');
+    // this.load.image('bg', 'BG.png');
     this.load.image('ground1', '13.png'); //soil
     this.load.image('ground2', '14.png');
     this.load.image('ground3', '15.png');
@@ -58,8 +60,8 @@ export default class GameScene extends Phaser.Scene {
     this.bgMusic.play();
 
     // background
-    this.add.image(0, 0, 'bg')
-      .setOrigin(0,0)
+    this.add.image(0, 0, 'assets', 'BG.png')
+      // .setOrigin(0,0)
       .setTint('0x555555');
 
     this.setupPlatforms();
