@@ -166,7 +166,8 @@ export default class GameScene extends Phaser.Scene {
     this.platforms = this.physics.add.staticGroup({
       key: 'ground1',
       repeat: 11, //creates 12 stars
-      setXY: { x: 0, y: 600, stepX: 70 } //stepX is distance
+      setXY: { x: 0, y: 600, stepX: 70 }, //stepX is distance
+      setOrigin: { x: 0, y: 0 }
     });
 
     // this.platforms.create(400, 580, 'ground').setScale(2).refreshBody();
@@ -176,12 +177,10 @@ export default class GameScene extends Phaser.Scene {
   }
 
   setupPlayer () {
-    this.player = this.physics.add.sprite(100, 450, 'girlRun1');
-    this.player.setScale(0.10);
-
-    this.player.setBounce(0.2);
-    this.player.setCollideWorldBounds(true);
-    // this.player = new Player(this).player;
+    this.player = this.physics.add.sprite(100, 450, 'girlRun1')
+      .setScale(0.10)
+      .setBounce(0.2)
+      .setCollideWorldBounds(true);
   }
 
   collectStar (player, star)
