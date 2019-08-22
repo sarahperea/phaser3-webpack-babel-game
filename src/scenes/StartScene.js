@@ -29,11 +29,10 @@ export default class StartScene extends Phaser.Scene {
         Dead: 15
       }
     };
-    this.progressBar = null;
+    this.progressBar = new ProgressBar(this);
   }
 
   preload () {
-    let progressBar = new ProgressBar(this);
 
     this.load.path = '../../assets/';
 
@@ -47,25 +46,21 @@ export default class StartScene extends Phaser.Scene {
     }
 
     this.load.on('progress', function (value) {
-      progressBar.getProgress(value);
-    });
+      this.progressBar.getProgress(value);
+    }, this);
                 
     this.load.on('fileprogress', function (file) {
-      progressBar.getFileProgress(file);
-    });
+      this.progressBar.getFileProgress(file);
+    }, this);
      
     this.load.on('complete', function () {
-      progressBar.bar.destroy();
-      progressBar.box.destroy();
-      progressBar.loadingText.destroy();
-      progressBar.percentText.destroy();
-      progressBar.assetText.destroy();
-    });
-
-    this.progressBar = progressBar;
+      this.destroyProgressBar();
+    }, this);
   }
 
   create () {
+    this.destroyProgressBar();
+
     this.add.text(220, 100, 'Choose your character and play!', { fontSize: '20px', fill: '#ffffff'});
 
     this.createPlayerBoxes();
@@ -137,5 +132,13 @@ export default class StartScene extends Phaser.Scene {
       frames.push({ key: `${gender}${action}${i}` });
     }
     return frames;
+  }
+
+  destroyProgressBar () {
+    this.progressBar.bar.destroy();
+    this.progressBar.box.destroy();
+    this.progressBar.loadingText.destroy();
+    this.progressBar.percentText.destroy();
+    this.progressBar.assetText.destroy();
   }
 }
