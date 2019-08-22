@@ -94,7 +94,6 @@ export default class StartScene extends Phaser.Scene {
 
     if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
     else this.cuteBoy.anims.play('boyJump', true);
-    // this.cuteGirl.anims.play('walk', true);
   }
 
   createPlayerBoxes () {
