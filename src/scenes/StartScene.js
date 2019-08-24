@@ -32,18 +32,10 @@ export default class StartScene extends Phaser.Scene {
 
     this.load.path = '../../assets/';
 
-    let sprites = this.playerSprites;
-/*    for (let [key1, value1] of Object.entries(sprites)) {
-      for (let [key, value] of Object.entries(sprites[key1])) {
-        for (let i=1; i<=value; i++) {
-          this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
-        }
-      }      
-    }*/
-
-    for (let [key, value] of Object.entries(sprites)) {
-      for (let i=1; i<=value; i++) {
-        this.load.image(`${ key.replace('/', '') }${ i }`, `${ key } (${ value }).png`);
+    for (let [key, val] of Object.entries(this.playerSprites)) {
+      for (let i = 1; i <= val; i++) {
+        let keyCopy = key;
+        this.load.image(`${ keyCopy.replace('/', '') }${ i }`, `${ key } (${ i }).png`);
       }
     }
 
@@ -73,11 +65,9 @@ export default class StartScene extends Phaser.Scene {
   }
 
   update () {
-    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
-    else this.cuteGirl.anims.play('girlJump', true);
+    this.cuteGirl.anims.play( `girl${ this.girlHovered ? 'Jump' : 'Idle' }`, true);
 
-    if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
-    else this.cuteBoy.anims.play('boyJump', true);
+    this.cuteBoy.anims.play( `boy${ this.boyHovered ? 'Jump' : 'Idle' }`, true);
   }
 
   createPlayerBoxes () {
@@ -113,10 +103,11 @@ export default class StartScene extends Phaser.Scene {
   }
 
   createPlayerAnimations () {
-    for (let [key, value] of Object.entries(this.playerSprites)) {
+    for (let [key, val] of Object.entries(this.playerSprites)) {
+      let keyCopy = key;
       this.anims.create({
-        key: `${ key.replace('/', '') }`,
-        frames: this.getFrames(key, value),
+        key: `${ keyCopy.replace('/', '') }`,
+        frames: this.getFrames(keyCopy, val),
         frameRate: 20,
         repeat: key.includes('Dead') ? 0 : -1
       });
@@ -125,7 +116,7 @@ export default class StartScene extends Phaser.Scene {
 
   getFrames (key, val) {
     let frames = [];
-    for (let i=1; i<=val; i++) {
+    for (let i = 1; i <= val; i++) {
       frames.push({ key: `${ key.replace('/','') }${ i }` });
     }
 
