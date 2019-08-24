@@ -16,18 +16,14 @@ export default class StartScene extends Phaser.Scene {
 
     this.player = null;
     this.playerSprites = {
-      girl: {
-        Idle: 16,
-        Jump: 10,
-        Run: 20,
-        Dead: 30
-      },
-      boy: {
-        Idle: 15,
-        Jump: 10,
-        Run: 15,
-        Dead: 15
-      }
+      'girl/Idle' : 16,
+      'girl/Jump' : 10,
+      'girl/Run'  : 20,
+      'girl/Dead' : 30,
+      'boy/Idle'  : 15,
+      'boy/Jump'  : 10,
+      'boy/Run'   : 15,
+      'boy/Dead'  : 15
     };
     this.progressBar = new ProgressBar(this);
   }
@@ -36,13 +32,11 @@ export default class StartScene extends Phaser.Scene {
 
     this.load.path = '../../assets/';
 
-    let sprites = this.playerSprites;
-    for (let [key1, value1] of Object.entries(sprites)) {
-      for (let [key, value] of Object.entries(sprites[key1])) {
-        for (let i=1; i<=value; i++) {
-          this.load.image(`${key1}${key}${i}`, `${key1}/${key} (${i}).png`);
-        }
-      }      
+    for (let [key, val] of Object.entries(this.playerSprites)) {
+      for (let i = 1; i <= val; i++) {
+        let keyCopy = key;
+        this.load.image(`${ keyCopy.replace('/', '') }${ i }`, `${ key } (${ i }).png`);
+      }
     }
 
     this.load.on('progress', function (value) {
@@ -71,11 +65,9 @@ export default class StartScene extends Phaser.Scene {
   }
 
   update () {
-    if (!this.girlHovered) this.cuteGirl.anims.play('girlIdle', true);
-    else this.cuteGirl.anims.play('girlJump', true);
+    this.cuteGirl.anims.play( `girl${ this.girlHovered ? 'Jump' : 'Idle' }`, true);
 
-    if (!this.boyHovered) this.cuteBoy.anims.play('boyIdle', true);
-    else this.cuteBoy.anims.play('boyJump', true);
+    this.cuteBoy.anims.play( `boy${ this.boyHovered ? 'Jump' : 'Idle' }`, true);
   }
 
   createPlayerBoxes () {
@@ -111,26 +103,23 @@ export default class StartScene extends Phaser.Scene {
   }
 
   createPlayerAnimations () {
-    let sprites = this.playerSprites;
-    for (let [key1, value1] of Object.entries(sprites)) {
-      for (let [key, value] of Object.entries(sprites[key1])) {
-        for (let i=1; i<=value; i++) {
-          this.anims.create({
-            key: `${key1}${key}`,
-            frames: this.getFrames(key1, key),
-            frameRate: 20,
-            repeat: key === 'Dead' ? 0 : -1
-          });
-        }
-      }      
+    for (let [key, val] of Object.entries(this.playerSprites)) {
+      let keyCopy = key;
+      this.anims.create({
+        key: `${ keyCopy.replace('/', '') }`,
+        frames: this.getFrames(keyCopy, val),
+        frameRate: 20,
+        repeat: key.includes('Dead') ? 0 : -1
+      });
     }
   }
 
-  getFrames (gender, action) {
+  getFrames (key, val) {
     let frames = [];
-    for (let i=1; i<=this.playerSprites[gender][action]; i++) {
-      frames.push({ key: `${gender}${action}${i}` });
+    for (let i = 1; i <= val; i++) {
+      frames.push({ key: `${ key.replace('/','') }${ i }` });
     }
+
     return frames;
   }
 
