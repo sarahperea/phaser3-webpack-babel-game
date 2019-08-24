@@ -121,28 +121,14 @@ export default class StartScene extends Phaser.Scene {
         repeat: key.includes('Dead') ? 0 : -1
       });
     }
-
-/*    for (let [key, value] of Object.entries(this.playerSprites)) {
-      this.anims.create({
-        key: `${key.replace('/', '')}`,
-        frames: this.anims.generateFrameNames('assets', {
-          start: 1,
-          end: value,
-          prefix: `${key} (`,
-          suffix: ').png'
-        }),
-        frameRate: 20,
-        repeat: key.includes('Dead') ? 0 : -1 
-      })
-    }
-*/  }
+  }
 
   getFrames (key, val) {
     let frames = [];
     for (let i=1; i<=val; i++) {
       frames.push({ key: `${ key.replace('/','') }${ i }` });
     }
-    console.log(frames)
+
     return frames;
   }
 
